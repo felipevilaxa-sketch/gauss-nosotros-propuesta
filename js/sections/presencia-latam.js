@@ -46,8 +46,47 @@
       svg.removeAttribute('height');
       img.replaceWith(svg);
       setup(svg);
+      fitMap(svg);
     })
     .catch(function () { /* se mantiene la imagen estática */ });
+
+  var paths = {};
+
+  /* ---------- Tamaño: el mapa iguala el alto de la lista de países ---------- */
+  function fitMap(svg) {
+    var list = document.querySelector('.latam__list');
+    var body = wrap.parentElement;
+    var vb = svg.viewBox && svg.viewBox.baseVal;
+    var ratio = vb && vb.height ? vb.width / vb.height : 390 / 454;
+    wrap.classList.add('is-fitted');
+
+    function fit() {
+      var stacked = getComputedStyle(body).flexDirection === 'column';
+      var w, h;
+      if (stacked) {
+        // Mobile: el mapa va bajo la lista y usa el ancho de la columna
+        w = body.clientWidth;
+        h = w / ratio;
+      } else {
+        var gap = parseFloat(getComputedStyle(body).columnGap) || 0;
+        var available = body.clientWidth - list.offsetWidth - gap;
+        h = list.offsetHeight;
+        w = Math.min(h * ratio, available);
+        h = w / ratio;
+      }
+      wrap.style.width = Math.round(w) + 'px';
+      wrap.style.height = Math.round(h) + 'px';
+      if (active) position(active);
+    }
+    fit();
+    if ('ResizeObserver' in window) {
+      var ro = new ResizeObserver(fit);
+      ro.observe(list);
+      ro.observe(body);
+    } else {
+      window.addEventListener('resize', fit);
+    }
+  }
 
   function setup(svg) {
     svg.querySelectorAll('[data-country]').forEach(function (path) {
@@ -57,6 +96,7 @@
       path.setAttribute('role', 'button');
       path.setAttribute('aria-label', d.name + ': ver oficina');
       path.setAttribute('aria-describedby', popup.id);
+      paths[path.dataset.country] = path;
 
       path.addEventListener('mouseenter', function () { open(path); });
       path.addEventListener('mouseleave', function () { if (!touchOpened) close(); });
@@ -77,11 +117,41 @@
       });
     });
 
+    /* ---------- Las cajas de la lista activan la misma interacción ---------- */
+    wrap.closest('.latam').classList.add('is-interactive');
+    Object.keys(data).forEach(function (key) {
+      var li = data[key].item;
+      var path = paths[key];
+      if (!li || !path) return;
+      li.addEventListener('mouseenter', function () { open(path); });
+      li.addEventListener('mouseleave', function () { if (!touchOpened) close(); });
+      // Teclado: al enfocar el teléfono de la caja también se muestra la oficina
+      li.addEventListener('focusin', function () { open(path); });
+      li.addEventListener('focusout', function (e) { if (!li.contains(e.relatedTarget)) close(); });
+      li.addEventListener('pointerup', function (e) {
+        if (e.pointerType === 'mouse' || e.target.closest('a')) return;
+        if (active === path) { close(); return; }
+        touchOpened = true;
+        open(path);
+        // Mobile: el mapa está bajo la lista; si el país o su popup no se ven, se lleva a la vista
+        // Se revisa el país y su popup (no solo el borde del mapa): Chile queda al fondo
+        var pr = path.getBoundingClientRect();
+        var pop = popup.getBoundingClientRect();
+        var subnav = document.querySelector('[data-subnav]');
+        var topLimit = subnav ? subnav.getBoundingClientRect().bottom : 0;
+        if (Math.max(pr.bottom, pop.bottom) > window.innerHeight || Math.min(pr.top, pop.top) < topLimit) {
+          var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          wrap.scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' });
+          setTimeout(function () { if (active === path) position(path); }, reduce ? 0 : 600);
+        }
+      });
+    });
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && active) close();
     });
     document.addEventListener('pointerdown', function (e) {
-      if (touchOpened && active && !wrap.contains(e.target)) close();
+      if (touchOpened && active && !wrap.contains(e.target) && !e.target.closest('.country')) close();
     });
     window.addEventListener('resize', function () { if (active) position(active); });
   }

@@ -1,0 +1,18 @@
+import { chromium } from 'playwright';
+const out = '../reference/screens/mejoras/latam-mapa/';
+const b = await chromium.launch();
+let p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+await p.goto('http://localhost:5173/', { waitUntil: 'networkidle' });
+await p.evaluate(() => { const m = document.querySelector('.latam__body'); scrollTo({ top: m.getBoundingClientRect().top + scrollY - 120, behavior: 'instant' }); });
+await p.waitForTimeout(800);
+await p.locator('.country[data-country="peru"] .country__name').hover(); await p.waitForTimeout(500);
+await p.screenshot({ path: out + '1440-caja-peru.png' });
+await p.close();
+p = await b.newPage({ viewport: { width: 390, height: 844 }, hasTouch: true });
+await p.goto('http://localhost:5173/', { waitUntil: 'networkidle' });
+await p.evaluate(() => { const m = document.querySelector('.latam__list'); scrollTo({ top: m.getBoundingClientRect().top + scrollY - 180, behavior: 'instant' }); });
+await p.waitForTimeout(800);
+await p.locator('.country[data-country="chile"] .country__name').tap(); await p.waitForTimeout(1300);
+await p.screenshot({ path: out + '390-tap-chile-mapa.png' });
+console.log('mapa visible tras tocar la caja:', await p.$eval('[data-latam-map]', e => { const r = e.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; }));
+await b.close();

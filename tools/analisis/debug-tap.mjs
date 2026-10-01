@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 390, height: 844 }, hasTouch: true });
+await p.goto('http://localhost:5173/', { waitUntil: 'networkidle' });
+await p.evaluate(() => { const m = document.querySelector('.latam__list'); scrollTo({ top: m.getBoundingClientRect().top + scrollY - 180, behavior: 'instant' }); });
+await p.waitForTimeout(800);
+await p.evaluate(() => { window.__log = []; const t0 = performance.now(); addEventListener('scroll', () => __log.push(Math.round(performance.now() - t0) + ':' + Math.round(scrollY)), { passive: true }); });
+console.log('antes', await p.evaluate(() => [Math.round(scrollY), Math.round(document.querySelector('[data-latam-map]').getBoundingClientRect().top)]));
+await p.locator('.country[data-country="chile"] .country__name').tap(); await p.waitForTimeout(1500);
+console.log('después', await p.evaluate(() => [Math.round(scrollY), Math.round(document.querySelector('[data-latam-map]').getBoundingClientRect().top)]));
+console.log(await p.evaluate(() => __log.slice(0, 40).join(' ')));
+await b.close();
