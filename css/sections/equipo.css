@@ -1,0 +1,132 @@
+/* =========================================================
+   SECCIÓN: equipo (#equipo) — acordeón Directorio / Gerencia
+   ========================================================= */
+
+.equipo {
+  background: var(--color-white);
+  padding: var(--space-40);
+}
+
+.equipo__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.equipo__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-regular);
+  line-height: 1;
+  letter-spacing: var(--ls-h3);
+  color: var(--color-slate);
+}
+
+/* ---------- Acordeón ---------- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.accordion__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-10);
+  padding: var(--space-16) 0;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  list-style: none;
+}
+.accordion__summary::-webkit-details-marker { display: none; }
+.accordion__summary::marker { content: ""; }
+
+.accordion__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-regular);
+  line-height: 1;
+  letter-spacing: var(--ls-h3);
+  color: var(--color-navy);
+}
+
+.accordion__icon { display: block; width: 40px; height: 40px; flex: none; }
+.accordion__icon img { width: 40px; height: 40px; }
+.accordion__icon-open { display: none !important; }
+.accordion__item[open] .accordion__icon-open { display: block !important; }
+.accordion__item[open] .accordion__icon-closed { display: none !important; }
+
+.accordion__content {
+  padding-top: var(--space-24);
+  overflow: hidden;
+}
+
+/* ---------- Grilla de tarjetas ---------- */
+.team-grid {
+  --cols: 5;
+  --col-gap: 2.5%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--col-gap);
+  row-gap: var(--space-32);
+}
+.team-grid--between { justify-content: space-between; }
+.team-grid + .team-grid { margin-top: var(--space-32); }
+
+.team-card {
+  width: calc((100% - (var(--cols) - 1) * var(--col-gap)) / var(--cols));
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card__photo {
+  height: 225px;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.team-card__info {
+  min-height: 100px;
+  padding: 14.5px var(--space-8) 29.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-8);
+  text-align: center;
+  background: var(--color-ice);
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+}
+
+.team-card__name {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  letter-spacing: var(--ls-tight);
+  color: var(--color-navy);
+}
+.team-card__role {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-slate);
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .team-grid { --cols: 3; --col-gap: 5%; }
+  .team-grid--between { row-gap: 0; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  .equipo { padding: var(--space-32) var(--space-24); }
+  .equipo__inner { gap: var(--space-16); }
+  .team-grid { --cols: 1; --col-gap: 0px; row-gap: var(--space-32); }
+  .team-grid--between { row-gap: var(--space-32); }
+  .team-card__photo { height: 324px; }
+  .accordion__icon,
+  .accordion__icon img { width: 30px; height: 30px; }
+}

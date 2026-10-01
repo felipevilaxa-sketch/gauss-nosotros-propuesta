@@ -1,0 +1,110 @@
+/* =========================================================
+   BASE — reset, tipografía, utilidades
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-slate);
+  background: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6 { font-weight: var(--fw-regular); line-height: 1; }
+
+/* El letter-spacing en em se recalcula por elemento (como en Elementor),
+   en vez de heredar el valor en px calculado en <body>. */
+body * { letter-spacing: var(--ls-tight); }
+
+img, svg { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Foco visible y consistente */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Utilidades */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-16);
+  top: -100px;
+  z-index: 10001;
+  padding: var(--space-12) var(--space-16);
+  background: var(--color-white);
+  color: var(--color-navy);
+  border-radius: var(--radius-tag);
+}
+.skip-link:focus { top: var(--space-16); }
+
+/* Botón píldora genérico */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  font-family: var(--font-family);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  letter-spacing: var(--ls-tight);
+  border-radius: var(--radius-pill);
+  border: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  white-space: nowrap;
+}
+.btn__arrow { width: 7px; height: 7px; flex: none; }
+.btn__arrow path { fill: currentColor; }
+
+/* Botón outline blanco (footer / off-canvas) */
+.btn--outline-white {
+  padding: var(--space-16);
+  color: var(--color-white);
+  background: transparent;
+  border: 1px solid var(--color-white);
+}
+.btn--outline-white:hover,
+.btn--outline-white:focus-visible {
+  background: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-white);
+}

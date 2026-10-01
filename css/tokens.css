@@ -1,0 +1,151 @@
+/* =========================================================
+   TOKENS — extraídos de gausscontrol.com/nosotros
+   Ver reference/tokens.md para el origen de cada valor.
+   Breakpoints: tablet ≤1024px · mobile ≤767px
+   ========================================================= */
+
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/WorkSans-Regular.woff2') format('woff2'),
+       url('../assets/fonts/WorkSans-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/WorkSans-Medium.woff2') format('woff2'),
+       url('../assets/fonts/WorkSans-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/WorkSans-SemiBold.woff2') format('woff2'),
+       url('../assets/fonts/WorkSans-SemiBold.woff') format('woff');
+}
+
+:root {
+  /* ---------- Color ---------- */
+  --color-orange: #FF8300;            /* header, hero, dropdown, "Inicia Sesión" */
+  --color-primary: #F78200;           /* naranja kit: off-canvas, hover texto botones footer */
+  --color-orange-light: #FFA745;      /* hover "Inicia Sesión" */
+  --color-orange-highlight: #FAA84C;  /* ítem resaltado dropdown */
+  --color-orange-tint: #FFE3C3;       /* hover "Contacto" */
+  --color-orange-soft: #FFBC7D;
+  --color-maroon: #631502;            /* texto menú off-canvas */
+  --color-maroon-line: rgba(156, 32, 1, 0.5); /* divisores off-canvas */
+  --color-navy: #003666;              /* títulos, acentos */
+  --color-slate: #677C8E;             /* texto, fondo footer */
+  --color-slate-dark: #4A647B;        /* botón LinkedIn footer */
+  --color-slate-light: #9BB3C8;       /* borde ícono "+" */
+  --color-border: #D0DBE5;            /* divisores */
+  --color-ice: #EAF3FB;               /* fondos suaves: íconos, tarjetas */
+  --color-ink: #313F4B;               /* selector de idioma off-canvas */
+  --color-select-border: #CDCDCD;
+  --color-black-soft: #1C1C1C;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+
+  --shadow-header: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  --shadow-dropdown: 1px 10px 10px 0 rgba(0, 0, 0, 0.3);
+  --focus-ring: 0 0 0 3px var(--color-navy);
+
+  /* ---------- Tipografía ---------- */
+  --font-family: 'WorkSans', sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-light: 300;
+  --ls-tight: -0.055em;               /* letter-spacing general */
+
+  --fs-h1: 3.75rem;                   /* 60px · hero */
+  --fs-h2: 3.75rem;                   /* 60px · títulos de sección */
+  --ls-h2: -0.055em;
+  --lh-h2: 1;
+  --fs-h3: 1.875rem;                  /* 30px · "Conoce nuestro equipo", acordeón */
+  --ls-h3: -0.055px;
+  --fs-h4: 1.125rem;                  /* 18px · valores */
+  --fs-country: 1.25rem;              /* 20px · nombre país */
+  --fs-body: 1rem;                    /* 16px */
+  --lh-body: 1.2;
+  --fs-small: 0.875rem;               /* 14px */
+  --fs-xsmall: 0.75rem;               /* 12px */
+  --fs-dropdown: 0.8125rem;           /* 13px · ítems del submenú */
+
+  /* ---------- Layout ---------- */
+  --container-max: 1280px;
+  --gutter: 40px;
+  --header-height: 110px;
+  --header-pad-x: 40px;
+
+  --section-pad-y: 100px;
+  --section-gap: 58px;
+  --heading-gap: 28px;
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* ---------- Radios ---------- */
+  --radius-pill: 50px;
+  --radius-pill-lg: 52px;
+  --radius-tag: 8px;
+  --radius-icon: 10px;
+  --radius-card: 20px;
+  --radius-dropdown: 10px;
+
+  /* ---------- Movimiento ---------- */
+  --transition-fast: 0.3s;
+  --transition-header: top 0.6s ease-in-out;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  :root {
+    --fs-h1: 3rem;                    /* 48px */
+    --fs-h2: 3rem;
+    --ls-h2: -0.035em;
+    --fs-h3: 1.5rem;                  /* 24px */
+    --ls-h3: -0.03em;
+    --fs-h4: 1rem;
+    --fs-country: 1.5rem;
+    --lh-body: 1;
+    --gutter: 24px;
+    --header-pad-x: 24px;
+    --section-pad-y: 64px;
+    --heading-gap: 24px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  :root {
+    --fs-h1: 2rem;                    /* 32px */
+    --fs-h2: 2rem;
+    --ls-h2: -0.02em;
+    --fs-h3: 1.5rem;
+    --ls-h3: -0.02em;
+    --fs-country: 1.125rem;           /* 18px */
+    --lh-body: 1.2;
+    --gutter: 16px;
+    --header-pad-x: 16px;
+    --section-pad-y: 48px;
+    --section-gap: 32px;
+    --heading-gap: 16px;
+  }
+}

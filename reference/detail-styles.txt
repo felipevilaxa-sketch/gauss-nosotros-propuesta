@@ -1,0 +1,262 @@
+##### 56745b8
+div elementor-element.e-flex "" 32,2882,1376,396 16px 400 lh24px rgb(51, 51, 51)
+div elementor-element.e-con-full "" 80,2882,545,396 16px 400 lh24px rgb(51, 51, 51) gap32px
+div elementor-element.e-con-full "" 80,2882,545,130 16px 400 lh24px rgb(51, 51, 51) gap12px
+p "Certificaciones" 80,2882,500,14 14px 400 lh14px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 80,2922,545,90 16px 400 lh24px rgb(51, 51, 51) gap32px
+div elementor-element.e-con-full "" 80,2922,127,90 16px 400 lh24px rgb(51, 51, 51) r5px gap0px
+img attachment-large.size-large "" 104,2927,80,80 16px 400 lh24px rgb(51, 51, 51)
+div elementor-element.e-con-full "" 239,2922,127,90 16px 400 lh24px rgb(51, 51, 51) r5px gap0px
+img attachment-large.size-large "" 263,2927,80,80 16px 400 lh24px rgb(51, 51, 51)
+div elementor-element.e-con-full "" 80,3180,545,98 16px 400 lh24px rgb(51, 51, 51) gap16px
+div elementor-element.e-con-full "" 80,3180,350,56 16px 400 lh24px rgb(51, 51, 51) gap0px
+img attachment-large.size-large "" 80,3180,107,55 16px 400 lh24px rgb(51, 51, 51)
+a elementor-button.elementor-button-link "" 250,3180,180,56 16px 400 lh16px rgb(255, 255, 255) bgrgb(74, 100, 123) p20px 48px r50px
+span elementor-button-content-wrapper "" 298,3200,84,16 16px 400 lh16px rgb(255, 255, 255) gap12px
+span elementor-button-icon "" 369,3200,13,16 16px 400 lh16px rgb(255, 255, 255)
+span elementor-button-text "LinkedIn" 298,3200,59,16 16px 400 lh16px rgb(255, 255, 255)
+p "© 2026 Gauss Control es prop" 80,3252,500,12 12px 400 lh12px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 657,2882,305,396 16px 400 lh24px rgb(51, 51, 51) p0px 30px 0px 0px gap32px
+span elementor-icon "" 657,2882,20,20 20px 400 lh20px rgb(247, 130, 0)
+svg "" 657,2882,20,20 20px 400 lh20px rgb(247, 130, 0)
+h3 elementor-icon-box-title "" 693,2890,239,0 12px 600 lh0px rgb(255, 255, 255)
+span "México" 693,2883,41,14 12px 600 lh0px rgb(255, 255, 255)
+p elementor-icon-box-description "" 693,2902,239,43 12px 400 lh14.4px rgb(255, 255, 255)
+a "+52 81 2592 2594" 748,2902,92,14 12px 400 lh14.4px rgb(255, 255, 255)
+span elementor-icon "" 657,2985,20,20 20px 400 lh20px rgb(247, 130, 0)
+svg "" 657,2985,20,20 20px 400 lh20px rgb(247, 130, 0)
+h3 elementor-icon-box-title "" 693,2993,239,1 12px 600 lh1.2px rgb(255, 255, 255)
+span "Colombia" 693,2986,55,14 12px 600 lh1.2px rgb(255, 255, 255)
+p elementor-icon-box-description "" 693,3006,239,43 12px 400 lh14.4px rgb(255, 255, 255)
+a "+57 31 0821 7805" 748,3006,88,14 12px 400 lh14.4px rgb(255, 255, 255)
+span elementor-icon "" 657,3090,20,20 20px 400 lh20px rgb(247, 130, 0)
+svg "" 657,3090,20,20 20px 400 lh20px rgb(247, 130, 0)
+h3 elementor-icon-box-title "" 693,3098,239,0 12px 600 lh0px rgb(255, 255, 255)
+span "Perú" 693,3091,27,14 12px 600 lh0px rgb(255, 255, 255)
+p elementor-icon-box-description "" 693,3110,239,58 12px 400 lh14.4px rgb(255, 255, 255)
+a "+51 945 236 760" 748,3110,85,14 12px 400 lh14.4px rgb(255, 255, 255)
+span elementor-icon "" 657,3207,20,20 20px 400 lh20px rgb(247, 130, 0)
+svg "" 657,3207,20,20 20px 400 lh20px rgb(247, 130, 0)
+h3 elementor-icon-box-title "" 693,3215,239,0 12px 600 lh0px rgb(255, 255, 255)
+span "Chile" 693,3208,30,14 12px 600 lh0px rgb(255, 255, 255)
+p elementor-icon-box-description "" 693,3227,239,43 12px 400 lh14.4px rgb(255, 255, 255)
+a "+56 9 9747 8013" 748,3227,84,14 12px 400 lh14.4px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 994,2882,366,396 16px 400 lh24px rgb(51, 51, 51) p0px 0px 0px 48px bl1px solid rgb(255, 255, 255) r0px 0px 0px 1px gap56px
+div elementor-element.e-con-full "" 1043,2888,317,78 16px 400 lh24px rgb(51, 51, 51) gap12px
+p "Ventas" 1043,2888,317,12 16px 600 lh12px rgb(255, 255, 255)
+li elementor-icon-list-item "" 1043,2926,317,20 16px 400 lh24px rgb(51, 51, 51) p0px 0px 4px
+span elementor-icon-list-text "" 1043,2926,201,16 16px 400 lh16px rgb(255, 255, 255) td
+a "contacto@gausscontrol.com" 1043,2926,201,16 16px 400 lh16px rgb(255, 255, 255)
+li elementor-icon-list-item "" 1043,2950,317,16 16px 400 lh24px rgb(51, 51, 51)
+span elementor-icon-list-text "" 1043,2950,112,16 16px 400 lh16px rgb(255, 255, 255) td
+a "+56 9 9747 8013" 1043,2950,112,16 16px 400 lh16px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 1043,3022,317,78 16px 400 lh24px rgb(51, 51, 51) gap12px
+p "Soporte Técnico" 1043,3022,317,12 16px 600 lh12px rgb(255, 255, 255)
+li elementor-icon-list-item "" 1043,3061,317,20 16px 400 lh24px rgb(51, 51, 51) p0px 0px 4px
+span elementor-icon-list-text "" 1043,3061,192,16 16px 400 lh16px rgb(255, 255, 255) td
+a "soporte@gausscontrol.com" 1043,3061,192,16 16px 400 lh16px rgb(255, 255, 255)
+li elementor-icon-list-item "" 1043,3085,317,16 16px 400 lh24px rgb(51, 51, 51)
+span elementor-icon-list-text "" 1043,3085,112,16 16px 400 lh16px rgb(255, 255, 255) td
+a "+56 9 3411 8902" 1043,3085,112,16 16px 400 lh16px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 1043,3157,317,116 16px 400 lh24px rgb(51, 51, 51) gap16px
+a elementor-button.elementor-button-link "" 1043,3157,300,50 16px 500 lh16px rgb(255, 255, 255) bgrgba(247, 130, 0, 0) p16px bt1px solid rgb(255, 255, 255) bb1px solid rgb(255, 255, 255) bl1px solid rgb(255, 255, 255) r50px
+span elementor-button-content-wrapper "" 1060,3174,266,16 16px 500 lh16px rgb(255, 255, 255) gap8px
+span elementor-button-icon "" 1315,3174,8,16 16px 500 lh16px rgb(255, 255, 255)
+svg "" 1315,3178,8,8 16px 500 lh16px rgb(255, 255, 255)
+span elementor-button-text "Compliance y Prevención del " 1060,3174,247,16 16px 500 lh16px rgb(255, 255, 255)
+a elementor-button.elementor-button-link "" 1043,3223,300,50 16px 500 lh16px rgb(255, 255, 255) bgrgba(247, 130, 0, 0) p16px bt1px solid rgb(255, 255, 255) bb1px solid rgb(255, 255, 255) bl1px solid rgb(255, 255, 255) r50px
+span elementor-button-content-wrapper "" 1060,3240,266,16 16px 500 lh16px rgb(255, 255, 255) gap8px
+span elementor-button-icon "" 1269,3240,8,16 16px 500 lh16px rgb(255, 255, 255)
+svg "" 1269,3244,8,8 16px 500 lh16px rgb(255, 255, 255)
+span elementor-button-text "Políticas Corporativas" 1109,3240,152,16 16px 500 lh16px rgb(255, 255, 255)
+##### 17b7ae8
+div elementor-element.e-con-full "" 378,2088,269,662 16px 400 lh24px rgb(51, 51, 51) gap0px
+span elementor-icon "" 378,2088,26,26 26px 400 lh26px rgb(247, 130, 0)
+svg "" 378,2088,26,26 26px 400 lh26px rgb(247, 130, 0)
+h3 elementor-icon-box-title "" 420,2096,227,10 20px 500 lh10px rgb(0, 54, 102)
+span "México" 420,2089,68,24 20px 500 lh10px rgb(0, 54, 102)
+p elementor-icon-box-description "" 420,2126,227,77 16px 400 lh19.2px rgb(103, 124, 142)
+a "+52 81 2592 2594" 492,2126,123,19 16px 400 lh19.2px rgb(103, 124, 142)
+span elementor-divider-separator "" 378,2239,269,1 16px 400 lh24px rgb(51, 51, 51) bt1px solid rgb(208, 219, 229)
+span elementor-icon "" 378,2268,26,26 26px 400 lh26px rgb(247, 130, 0)
+svg "" 378,2268,26,26 26px 400 lh26px rgb(247, 130, 0)
+h3 elementor-icon-box-title "" 420,2276,227,10 20px 500 lh10px rgb(0, 54, 102)
+span "Colombia" 420,2269,92,24 20px 500 lh10px rgb(0, 54, 102)
+p elementor-icon-box-description "" 420,2306,227,58 16px 400 lh19.2px rgb(103, 124, 142)
+a "+57 31 0821 7805" 492,2306,118,19 16px 400 lh19.2px rgb(103, 124, 142)
+span elementor-divider-separator "" 378,2399,269,1 16px 400 lh24px rgb(51, 51, 51) bt1px solid rgb(208, 219, 229)
+span elementor-icon "" 378,2428,26,26 26px 400 lh26px rgb(247, 130, 0)
+svg "" 378,2428,26,26 26px 400 lh26px rgb(247, 130, 0)
+h3 elementor-icon-box-title "" 420,2436,227,10 20px 500 lh10px rgb(0, 54, 102)
+span "Perú" 420,2429,44,24 20px 500 lh10px rgb(0, 54, 102)
+p elementor-icon-box-description "" 420,2466,227,96 16px 400 lh19.2px rgb(103, 124, 142)
+a "+51 945 236 760" 492,2466,113,19 16px 400 lh19.2px rgb(103, 124, 142)
+span elementor-divider-separator "" 378,2598,269,1 16px 400 lh24px rgb(51, 51, 51) bt1px solid rgb(208, 219, 229)
+span elementor-icon "" 378,2627,26,26 26px 400 lh26px rgb(247, 130, 0)
+svg "" 378,2627,26,26 26px 400 lh26px rgb(247, 130, 0)
+h3 elementor-icon-box-title "" 420,2635,227,10 20px 500 lh10px rgb(0, 54, 102)
+span "Chile" 420,2628,49,24 20px 500 lh10px rgb(0, 54, 102)
+p elementor-icon-box-description "" 420,2665,227,77 16px 400 lh19.2px rgb(103, 124, 142)
+a "+56 9 9747 8013" 492,2665,112,19 16px 400 lh19.2px rgb(103, 124, 142)
+img attachment-large.size-large "" 678,2192,384,453 16px 400 lh24px rgb(51, 51, 51)
+##### 57ca63d
+span elementor-icon "" 189,918,64,64 32px 400 lh32px rgb(234, 243, 251) bgrgb(234, 243, 251) p16px r10px
+svg "" 205,934,32,32 32px 400 lh32px rgb(234, 243, 251)
+h3 elementor-icon-box-title "" 80,1006,282,36 18px 500 lh18px rgb(0, 54, 102)
+span "Agilidad para actuar con cal" 93,1004,257,39 18px 500 lh18px rgb(0, 54, 102)
+span elementor-icon "" 522,918,64,64 32px 400 lh32px rgb(234, 243, 251) bgrgb(234, 243, 251) p16px r10px
+svg "" 538,934,32,32 32px 400 lh32px rgb(234, 243, 251)
+h3 elementor-icon-box-title "" 413,1006,282,54 18px 500 lh18px rgb(0, 54, 102)
+span "Autonomía con responsabilida" 426,1004,254,57 18px 500 lh18px rgb(0, 54, 102)
+span elementor-icon "" 854,918,64,64 32px 400 lh32px rgb(234, 243, 251) bgrgb(234, 243, 251) p16px r10px
+svg "" 870,934,32,32 32px 400 lh32px rgb(234, 243, 251)
+h3 elementor-icon-box-title "" 746,1006,282,36 18px 500 lh18px rgb(0, 54, 102)
+span "Ambición por escalar, mejora" 762,1004,248,39 18px 500 lh18px rgb(0, 54, 102)
+span elementor-icon "" 1187,918,64,64 32px 400 lh32px rgb(234, 243, 251) bgrgb(234, 243, 251) p16px r10px
+svg "" 1203,934,32,32 32px 400 lh32px rgb(234, 243, 251)
+h3 elementor-icon-box-title "" 1078,1006,282,36 18px 500 lh18px rgb(0, 54, 102)
+span "Colaboración con exigencia: " 1081,1004,277,39 18px 500 lh18px rgb(0, 54, 102)
+##### d1d3ad3
+div elementor-element.e-con-full "" 80,160,659,400 16px 400 lh24px rgb(51, 51, 51) gap16px 0px
+a elementor-button.elementor-button-link "" 80,160,95,40 16px 500 lh16px rgb(255, 255, 255) bgrgb(0, 54, 102) p12px 16px r8px
+span elementor-button-content-wrapper "" 96,172,63,16 16px 500 lh16px rgb(255, 255, 255) gap5px
+span elementor-button-text "Nosotros" 96,172,63,16 16px 500 lh16px rgb(255, 255, 255)
+h1 elementor-heading-title.elementor-size-default "Personas y propósito que imp" 80,216,659,180 60px 500 lh60px rgb(255, 255, 255)
+a elementor-button.elementor-button-link "" 80,436,125,48 16px 500 lh16px rgb(28, 28, 28) bgrgb(255, 255, 255) p16px 24px r52px
+span elementor-button-content-wrapper "" 104,452,77,16 16px 500 lh16px rgb(28, 28, 28) gap5px
+span elementor-button-text "Escríbenos" 104,452,77,16 16px 500 lh16px rgb(28, 28, 28)
+div elementor-element.e-con-full "" 803,160,557,400 16px 400 lh24px rgb(51, 51, 51) gap0px
+img attachment-large.size-large "" 820,160,540,350 16px 400 lh24px rgb(51, 51, 51)
+##### fe1d8fa
+div elementor-element.e-flex "" 40,31,1360,49 16px 400 lh24px rgb(51, 51, 51) r20px
+a "" 80,31,95,49 16px 400 lh24px rgb(204, 51, 102)
+img attachment-full.size-full "" 80,31,95,49 16px 400 lh24px rgb(204, 51, 102)
+li menu-item.menu-item-type-custom "" 207,45,52,20 16px 400 lhnormal rgb(51, 51, 51)
+a elementor-item "Inicio" 207,45,42,20 16px 500 lh20px rgb(255, 255, 255)
+li menu-item.menu-item-type-custom "" 259,45,125,20 16px 400 lhnormal rgb(51, 51, 51)
+a elementor-item.has-submenu "" 269,45,105,20 16px 500 lh20px rgb(255, 255, 255)
+span sub-arrow "" 354,39,20,31 16px 500 lh16px rgb(255, 255, 255) p10px 0px 10px 10px
+li menu-item.menu-item-type-custom "" 384,45,67,20 16px 400 lhnormal rgb(51, 51, 51)
+a elementor-item "Casos" 394,45,47,20 16px 500 lh20px rgb(255, 255, 255)
+li menu-item.menu-item-type-custom "" 450,45,90,20 16px 400 lhnormal rgb(51, 51, 51)
+a elementor-item.elementor-item-active "Nosotros" 460,45,70,20 16px 500 lh20px rgb(255, 255, 255)
+li menu-item.wpml-ls-slot-5 "" 541,45,115,20 16px 400 lhnormal rgb(51, 51, 51)
+a elementor-item.has-submenu "" 551,45,105,20 16px 500 lh20px rgb(255, 255, 255)
+img wpml-ls-flag "" 551,49,18,12 16px 500 lh20px rgb(255, 255, 255)
+span wpml-ls-display "Español" 574,45,62,20 16px 500 lh20px rgb(255, 255, 255)
+span sub-arrow "" 636,39,20,31 16px 500 lh16px rgb(255, 255, 255) p10px 0px 10px 10px
+div elementor-element.e-con-full "" 939,34,421,42 16px 400 lh24px rgb(51, 51, 51) gap20px
+span elementor-grid-item "" 1046,35,40,40 0px 400 lh0px rgb(51, 51, 51)
+a elementor-icon.elementor-social-icon "" 1046,35,40,40 20px 400 lh20px rgb(105, 114, 125) bgrgb(255, 255, 255) r50%
+span elementor-screen-only "" 1066,-199966,1,1 20px 400 lh20px rgb(105, 114, 125)
+svg "" 1056,45,20,20 20px 400 lh20px rgb(105, 114, 125)
+a elementor-button.elementor-button-link "" 1106,35,97,40 16px 500 lh16px rgb(0, 0, 0) bgrgb(255, 255, 255) p12px 16px r50px
+span elementor-button-content-wrapper "" 1122,47,65,16 16px 500 lh16px rgb(0, 0, 0) gap5px
+span elementor-button-text "Contacto" 1122,47,65,16 16px 500 lh16px rgb(0, 0, 0)
+a elementor-button.elementor-button-link "" 1223,34,137,42 16px 500 lh16px rgb(255, 255, 255) bgrgb(255, 131, 0) p12px 16px bt1px solid rgb(255, 255, 255) bb1px solid rgb(255, 255, 255) bl1px solid rgb(255, 255, 255) r50px
+span elementor-button-content-wrapper "" 1240,47,103,16 16px 500 lh16px rgb(255, 255, 255) gap8px
+span elementor-button-icon "" 1335,47,8,16 16px 500 lh16px rgb(255, 255, 255)
+svg "" 1335,51,8,8 16px 500 lh16px rgb(255, 255, 255)
+span elementor-button-text "Inicia Sesión" 1240,47,87,16 16px 500 lh16px rgb(255, 255, 255)
+##### offcanvas
+div elementor-element.e-con-full "" 0,0,390,1168 16px 400 lh24px rgb(51, 51, 51) p0px 0px 48px gap0px
+div elementor-element.e-con-full "" 0,0,390,85 16px 400 lh24px rgb(51, 51, 51) p16px gap0px
+a "" 16,16,107,53 16px 400 lh24px rgb(204, 51, 102)
+img attachment-full.size-full "" 16,16,107,53 16px 400 lh24px rgb(204, 51, 102)
+a elementor-icon "" 334,20,40,40 40px 400 lh40px rgb(255, 255, 255) bgrgba(255, 255, 255, 0)
+div elementor-element.e-con-full "" 0,85,390,1035 16px 400 lh24px rgb(51, 51, 51) p8px 16.4px 0px gap34px
+div elementor-element.e-con-full "" 16,93,357,343 16px 400 lh24px rgb(51, 51, 51) gap18px 0px
+a elementor-button.elementor-button-link "" 16,93,357,40 16px 500 lh16px rgb(0, 0, 0) bgrgb(255, 255, 255) p12px 16px r50px
+span elementor-button-content-wrapper "" 32,105,325,16 16px 500 lh16px rgb(0, 0, 0) gap5px
+span elementor-button-text "Contacto" 163,105,65,16 16px 500 lh16px rgb(0, 0, 0)
+a elementor-button.elementor-button-link "" 16,151,357,42 16px 500 lh16px rgb(255, 255, 255) bgrgb(247, 130, 0) p12px 16px bt1px solid rgb(255, 255, 255) bb1px solid rgb(255, 255, 255) bl1px solid rgb(255, 255, 255) r50px
+span elementor-button-content-wrapper "" 33,164,323,16 16px 500 lh16px rgb(255, 255, 255) gap8px
+span elementor-button-icon "" 238,164,8,16 16px 500 lh16px rgb(255, 255, 255)
+svg "" 238,168,8,8 16px 500 lh16px rgb(255, 255, 255)
+span elementor-button-text "Inicia Sesión" 144,164,87,16 16px 500 lh16px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 16,211,357,225 16px 400 lh24px rgb(51, 51, 51) gap0px
+a elementor-button.elementor-button-link "" 16,211,357,49 16px 500 lh16px rgb(99, 21, 2) bgrgb(247, 130, 0) p16px 0px bb1px solid rgba(156, 32, 1, 0.5)
+span elementor-button-content-wrapper "" 16,227,357,16 16px 500 lh16px rgb(99, 21, 2) gap5px
+span elementor-button-text "Inicio" 16,227,42,16 16px 500 lh16px rgb(99, 21, 2)
+span e-n-accordion-item-title-header "" 16,276,86,16 16px 400 lh24px rgb(99, 21, 2)
+span e-n-accordion-item-title-icon "" 110,278,11,12 16px 400 lh24px rgb(99, 21, 2)
+span e-closed "" 110,278,11,12 16px 400 lh24px rgb(99, 21, 2)
+div elementor-element.e-con-full "" 16,309,357,196 16px 400 lh24px rgb(51, 51, 51) gap0px
+a elementor-button.elementor-button-link "" 16,309,357,49 16px 500 lh16px rgb(99, 21, 2) bgrgb(247, 130, 0) p16px 0px bb1px solid rgba(156, 32, 1, 0.5)
+span elementor-button-content-wrapper "" 16,325,357,16 16px 500 lh16px rgb(99, 21, 2) gap5px
+span elementor-button-text "" 16,325,58,16 16px 500 lh16px rgb(99, 21, 2)
+a elementor-button.elementor-button-link "" 16,358,357,49 16px 500 lh16px rgb(99, 21, 2) bgrgb(247, 130, 0) p16px 0px bb1px solid rgba(156, 32, 1, 0.5)
+span elementor-button-content-wrapper "" 16,374,357,16 16px 500 lh16px rgb(99, 21, 2) gap5px
+span elementor-button-text "" 16,374,86,16 16px 500 lh16px rgb(99, 21, 2)
+a elementor-button.elementor-button-link "" 16,407,357,49 16px 500 lh16px rgb(99, 21, 2) bgrgb(247, 130, 0) p16px 0px bb1px solid rgba(156, 32, 1, 0.5)
+span elementor-button-content-wrapper "" 16,423,357,16 16px 500 lh16px rgb(99, 21, 2) gap5px
+span elementor-button-text "" 16,423,91,16 16px 500 lh16px rgb(99, 21, 2)
+a elementor-button.elementor-button-link "" 16,456,357,49 16px 500 lh16px rgb(99, 21, 2) bgrgb(247, 130, 0) p16px 0px bb1px solid rgba(156, 32, 1, 0.5)
+span elementor-button-content-wrapper "" 16,472,357,16 16px 500 lh16px rgb(99, 21, 2) gap5px
+span elementor-button-text "" 16,472,93,16 16px 500 lh16px rgb(99, 21, 2)
+a elementor-button.elementor-button-link "" 16,309,357,49 16px 500 lh16px rgb(99, 21, 2) bgrgb(247, 130, 0) p16px 0px bb1px solid rgba(156, 32, 1, 0.5)
+span elementor-button-content-wrapper "" 16,325,357,16 16px 500 lh16px rgb(99, 21, 2) gap5px
+span elementor-button-text "Casos" 16,325,47,16 16px 500 lh16px rgb(99, 21, 2)
+a elementor-button.elementor-button-link "" 16,358,357,48 16px 500 lh16px rgb(99, 21, 2) bgrgb(247, 130, 0) p16px 0px
+span elementor-button-content-wrapper "" 16,374,357,16 16px 500 lh16px rgb(99, 21, 2) gap5px
+span elementor-button-text "Nosotros" 16,374,71,16 16px 500 lh16px rgb(99, 21, 2)
+li wpml-ls-slot-shortcode_actions.wpml-ls-item "" 16,406,248,30 16px 400 lh24px rgb(51, 51, 51)
+a js-wpml-ls-item-toggle.wpml-ls-item-toggle "" 16,406,248,30 16px 400 lh16px rgb(49, 63, 75) bgrgb(247, 130, 0) p5px 32.4px 5px 10px bt1px solid rgb(205, 205, 205) bb1px solid rgb(205, 205, 205) bl1px solid rgb(205, 205, 205)
+img wpml-ls-flag "" 27,416,18,12 16px 400 lh16px rgb(49, 63, 75)
+span wpml-ls-native "Español" 52,411,55,21 16px 400 lh16px rgb(49, 63, 75)
+li wpml-ls-slot-shortcode_actions.wpml-ls-item "" 16,437,248,29 16px 400 lh24px rgb(51, 51, 51)
+a wpml-ls-link "" 16,437,248,29 16px 400 lh16px rgb(49, 63, 75) bgrgb(247, 130, 0) p5px 10px bb1px solid rgb(205, 205, 205) bl1px solid rgb(205, 205, 205)
+img wpml-ls-flag "" 27,446,18,12 16px 400 lh16px rgb(49, 63, 75)
+span wpml-ls-native "" 52,441,50,21 16px 400 lh16px rgb(49, 63, 75)
+li wpml-ls-slot-shortcode_actions.wpml-ls-item "" 16,466,248,29 16px 400 lh24px rgb(51, 51, 51)
+a wpml-ls-link "" 16,466,248,29 16px 400 lh16px rgb(49, 63, 75) bgrgb(247, 130, 0) p5px 10px bb1px solid rgb(205, 205, 205) bl1px solid rgb(205, 205, 205)
+img wpml-ls-flag "" 27,475,18,12 16px 400 lh16px rgb(49, 63, 75)
+span wpml-ls-native "" 52,470,71,21 16px 400 lh16px rgb(49, 63, 75)
+span elementor-grid-item "" 16,470,30,30 0px 400 lh0px rgb(51, 51, 51)
+a elementor-icon.elementor-social-icon "" 16,470,30,30 30px 400 lh30px rgb(105, 114, 125) bgrgb(247, 130, 0)
+span elementor-screen-only "" 31,-299531,1,1 30px 400 lh30px rgb(105, 114, 125)
+svg "" 16,470,30,30 30px 400 lh30px rgb(105, 114, 125)
+div elementor-element.e-con-full "" 16,534,357,120 16px 400 lh24px rgb(51, 51, 51) gap20px
+a elementor-button.elementor-button-link "" 16,534,357,50 16px 500 lh16px rgb(255, 255, 255) bgrgba(247, 130, 0, 0) p16px bt1px solid rgb(255, 255, 255) bb1px solid rgb(255, 255, 255) bl1px solid rgb(255, 255, 255) r50px
+span elementor-button-content-wrapper "" 33,551,323,16 16px 500 lh16px rgb(255, 255, 255) gap8px
+span elementor-button-icon "" 319,551,8,16 16px 500 lh16px rgb(255, 255, 255)
+svg "" 319,555,8,8 16px 500 lh16px rgb(255, 255, 255)
+span elementor-button-text "Compliance y Prevención del " 63,551,247,16 16px 500 lh16px rgb(255, 255, 255)
+a elementor-button.elementor-button-link "" 16,604,357,50 16px 500 lh16px rgb(255, 255, 255) bgrgba(247, 130, 0, 0) p16px bt1px solid rgb(255, 255, 255) bb1px solid rgb(255, 255, 255) bl1px solid rgb(255, 255, 255) r50px
+span elementor-button-content-wrapper "" 33,621,323,16 16px 500 lh16px rgb(255, 255, 255) gap8px
+span elementor-button-icon "" 271,621,8,16 16px 500 lh16px rgb(255, 255, 255)
+svg "" 271,625,8,8 16px 500 lh16px rgb(255, 255, 255)
+span elementor-button-text "Políticas Corporativas" 111,621,152,16 16px 500 lh16px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 16,688,357,83 16px 400 lh24px rgb(51, 51, 51) gap20px
+p "Ventas" 16,688,357,16 16px 500 lh16px rgb(255, 255, 255)
+li elementor-icon-list-item "" 16,724,357,24 16px 400 lh24px rgb(51, 51, 51) p0px 0px 4px
+span elementor-icon-list-text "" 16,724,176,20 14px 400 lh19.6px rgb(255, 255, 255) td
+a "contacto@gausscontrol.com" 16,724,176,20 14px 400 lh19.6px rgb(255, 255, 255)
+li elementor-icon-list-item "" 16,752,357,20 16px 400 lh24px rgb(51, 51, 51)
+span elementor-icon-list-text "" 16,752,98,20 14px 400 lh19.6px rgb(255, 255, 255) td
+a "+56 9 9747 8013" 16,752,98,20 14px 400 lh19.6px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 16,805,357,83 16px 400 lh24px rgb(51, 51, 51) gap20px
+p "Soporte técnico" 16,805,357,16 16px 500 lh16px rgb(255, 255, 255)
+li elementor-icon-list-item "" 16,841,357,24 16px 400 lh24px rgb(51, 51, 51) p0px 0px 4px
+span elementor-icon-list-text "" 16,841,168,20 14px 400 lh19.6px rgb(255, 255, 255) td
+a "soporte@gausscontrol.com" 16,841,168,20 14px 400 lh19.6px rgb(255, 255, 255)
+li elementor-icon-list-item "" 16,869,357,20 16px 400 lh24px rgb(51, 51, 51)
+span elementor-icon-list-text "" 16,869,98,20 14px 400 lh19.6px rgb(255, 255, 255) td
+a "+56 9 3411 8902" 16,869,98,20 14px 400 lh19.6px rgb(255, 255, 255)
+div elementor-element.e-con-full "" 16,922,357,197 16px 400 lh24px rgb(51, 51, 51) gap20px
+p "Oficinas" 16,922,357,16 16px 500 lh16px rgb(255, 255, 255)
+li elementor-icon-list-item "" 16,958,357,43 16px 400 lh24px rgb(51, 51, 51) p0px 0px 4px
+span elementor-icon-list-text "México: Av. 2 de Octubre 333" 16,958,357,39 14px 400 lh19.6px rgb(255, 255, 255) td
+li elementor-icon-list-item "" 16,1006,357,24 16px 400 lh24px rgb(51, 51, 51) p0px 0px 4px
+span elementor-icon-list-text "Colombia: Calle 146 # 7-64 O" 16,1006,283,20 14px 400 lh19.6px rgb(255, 255, 255) td
+li elementor-icon-list-item "" 16,1033,357,43 16px 400 lh24px rgb(51, 51, 51) p0px 0px 4px
+span elementor-icon-list-text "Perú: Camino Real 456, ofici" 16,1033,357,39 14px 400 lh19.6px rgb(255, 255, 255) td
+li elementor-icon-list-item "" 16,1080,357,39 16px 400 lh24px rgb(51, 51, 51)
+span elementor-icon-list-text "Chile: Calle Rosario Norte 5" 16,1080,357,39 14px 400 lh19.6px rgb(255, 255, 255) td
+##### header390
+div elementor-element.e-flex "" 16,25,358,60 16px 400 lh24px rgb(51, 51, 51) r20px
+a "" 20,25,107,60 16px 400 lh24px rgb(204, 51, 102)
+img attachment-full.size-full "" 20,25,107,60 16px 400 lh24px rgb(204, 51, 102)
+div elementor-element.e-con-full "" 265,28,105,54 16px 400 lh24px rgb(51, 51, 51) gap0px
+a elementor-icon "" 323,28,48,48 48px 400 lh48px rgb(0, 54, 102)
+svg "" 323,28,48,48 48px 400 lh48px rgb(0, 54, 102)

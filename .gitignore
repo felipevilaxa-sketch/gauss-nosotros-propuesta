@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Capturas regenerables con tools/ (las del original sí se versionan)
+reference/screens/replica/
+reference/screens/compare/

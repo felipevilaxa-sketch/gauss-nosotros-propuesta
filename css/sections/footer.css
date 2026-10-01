@@ -1,0 +1,147 @@
+/* =========================================================
+   SECCIÓN: footer (#footer)
+   ========================================================= */
+
+.site-footer {
+  background: var(--color-slate);
+  color: var(--color-white);
+  padding: var(--space-32);
+}
+
+.site-footer__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 545fr 305fr 366fr;
+  gap: var(--space-32);
+  min-height: 396px;
+}
+
+/* ---------- Columna 1: certificaciones + marca ---------- */
+.site-footer__col--brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-32);
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+.site-footer__brand-row {
+  width: 350px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-footer__logo { width: 107px; height: auto; }
+
+.site-footer__linkedin {
+  gap: var(--space-12);
+  padding: var(--space-20) var(--space-48);
+  background: var(--color-slate-dark);
+  color: var(--color-white);
+  font-weight: var(--fw-regular);
+}
+.site-footer__linkedin img { width: 13px; height: 13px; }
+
+.site-footer__copy {
+  font-size: var(--fs-xsmall);
+  line-height: 1;
+}
+
+/* ---------- Columna 2: oficinas ---------- */
+.site-footer__col--offices { padding-right: 30px; }
+
+.footer-offices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+}
+.footer-office {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+}
+.footer-office > img { width: 20px; height: 20px; flex: none; }
+.footer-office__name {
+  font-size: var(--fs-xsmall);
+  font-weight: var(--fw-semibold);
+  line-height: 14px;
+  color: var(--color-white);
+}
+.footer-office__desc {
+  margin-top: 5px;
+  font-size: var(--fs-xsmall);
+  line-height: 1.2;
+}
+.footer-office__desc a { text-decoration: underline; }
+
+/* ---------- Columna 3: contacto ---------- */
+.site-footer__col--contact {
+  border-left: 1px solid var(--color-white);
+  padding-left: var(--space-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-56);
+}
+
+.footer-contact:first-child { padding-top: 6px; }
+.footer-contact__title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  line-height: 12px;
+}
+.footer-contact ul {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  line-height: 1;
+}
+.footer-contact a {
+  font-size: var(--fs-body);
+  line-height: 1;
+  text-decoration: underline;
+}
+
+.footer-contact__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-16);
+}
+.footer-contact__buttons .btn { width: 300px; max-width: 100%; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .site-footer__inner {
+    grid-template-columns: 380fr 292fr;
+    min-height: 380px;
+  }
+  .site-footer__col--offices { display: none; }
+  .site-footer__col--contact { gap: var(--space-48); }
+  .footer-contact:first-child { padding-top: 0; }
+  .footer-contact__title { line-height: 1; }
+  .footer-contact ul { margin-top: var(--space-20); }
+  .footer-contact__buttons .btn { width: 100%; white-space: normal; text-align: center; }
+  .site-footer__copy { font-size: var(--fs-small); }
+  .site-footer__brand { padding-bottom: 14px; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  .site-footer { padding: var(--space-32) var(--space-20); }
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .site-footer__col--contact { display: none; }
+  .site-footer__col--brand { gap: var(--space-80); justify-content: flex-start; }
+  .site-footer__copy { font-size: var(--fs-xsmall); }
+  .site-footer__brand-row { justify-content: flex-start; gap: var(--space-16); }
+  .site-footer__logo { height: 57px; }
+}

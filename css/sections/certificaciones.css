@@ -1,0 +1,44 @@
+/* =========================================================
+   SECCIÓN: certificaciones (#certificaciones)
+   Vive dentro de la primera columna del footer, como en el original.
+   ========================================================= */
+
+.certificaciones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.certificaciones__title {
+  font-size: var(--fs-small);
+  line-height: 1;
+  color: var(--color-white);
+}
+
+.certificaciones__list {
+  display: flex;
+  gap: var(--space-32);
+}
+
+.certificaciones__item {
+  width: 127px;
+  height: 90px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+.certificaciones__item img { width: 80px; height: 80px; object-fit: contain; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .certificaciones__title { font-size: var(--fs-body); }
+  .certificaciones__item { height: 104px; padding-top: 12px; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  .certificaciones { gap: var(--space-4); }
+  .certificaciones__item { height: 104px; padding-top: 22px; }
+  .certificaciones__item img { width: 74px; height: 74px; }
+}
