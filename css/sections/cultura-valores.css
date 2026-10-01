@@ -1,5 +1,6 @@
 /* =========================================================
    SECCIÓN: cultura-valores (#cultura-valores)
+   Intro original + grilla de cards de valores (mobile first).
    ========================================================= */
 
 /* Títulos de sección compartidos (también los usa presencia-latam) */
@@ -32,71 +33,123 @@
   display: flex;
   flex-direction: column;
   gap: var(--heading-gap);
-  padding-bottom: 14px;
 }
 
+/* ---------- Cards de valores ---------- */
 .valores {
-  margin-top: var(--space-48);
+  margin-top: var(--space-32);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 51px;
-  min-height: 160px;
+  grid-template-columns: 1fr;
+  gap: var(--space-16);
 }
 
 .valor {
   display: flex;
   flex-direction: column;
+  gap: var(--space-16);
+  padding: var(--space-24);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.valor__head {
+  display: flex;
   align-items: center;
-  gap: var(--space-24);
-  text-align: center;
+  gap: var(--space-16);
 }
 
 .valor__icon {
-  width: 64px;
-  height: 64px;
-  padding: var(--space-16);
+  width: 52px;
+  height: 52px;
+  padding: var(--space-12);
   border-radius: var(--radius-icon);
   background: var(--color-ice);
   flex: none;
 }
-.valor__icon img { width: 32px; height: 32px; }
+.valor__icon img { width: 28px; height: 28px; }
 
-.valor__title {
-  font-size: var(--fs-h4);
-  font-weight: var(--fw-medium);
+.valor__name {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-regular);
   line-height: 1;
-  letter-spacing: var(--ls-tight);
+  letter-spacing: var(--ls-h3);
   color: var(--color-navy);
-
 }
 
-/* ---------- Tablet ---------- */
-@media (max-width: 1024px) {
-  .valores { max-width: 672px; margin-inline: auto; column-gap: 0; min-height: 168px; }
-  .valor { gap: 22px; }
-  .valor__title { padding-inline: 13px; }
+.valor__summary {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--color-navy);
 }
 
-/* ---------- Mobile ---------- */
+/* "Cómo se vive en Gauss": misma pieza celeste que el pie de las tarjetas del equipo */
+.valor__live {
+  margin: 0;
+  flex: 1;                            /* rellena la card: los bloques terminan alineados */
+  padding: var(--space-16);
+  background: var(--color-ice);
+  border-radius: var(--radius-icon);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+.valor__live-label {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  color: var(--color-navy);
+}
+.valor__live blockquote { margin: 0; }
+.valor__live blockquote p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-slate);
+}
+.valor__live figcaption {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  color: var(--color-slate);
+}
+
+/* Con subgrid, encabezado, bajada y bloque se alinean entre cards de la misma fila */
+@supports (grid-template-rows: subgrid) {
+  .valor {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    align-content: start;
+  }
+}
+
+/* ---------- Tablet: 2×2 ---------- */
+@media (min-width: 768px) {
+  .valores {
+    margin-top: var(--space-48);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-24);
+  }
+  .valor { padding: var(--space-32); }
+  .valor__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .valor__icon { width: 64px; height: 64px; padding: var(--space-16); }
+  .valor__icon img { width: 32px; height: 32px; }
+}
+
+/* ---------- Desktop: 4 columnas ---------- */
+@media (min-width: 1025px) {
+  .cultura__intro { padding-bottom: 14px; }
+  .valores { grid-template-columns: repeat(4, 1fr); }
+  .valor { padding: var(--space-24); }
+}
+
+/* ---------- Mobile: intro alineada a la izquierda (como el original) ---------- */
 @media (max-width: 767px) {
   .cultura__inner { max-width: 351px; }
-  .cultura__intro { text-align: left; }
   .cultura .section-title,
   .cultura .section-lead { text-align: left; }
-  .valores {
-    max-width: none;
-    min-height: 0;
-    margin-top: var(--space-32);
-    grid-template-columns: 1fr;
-    row-gap: 29px;
-  }
-  .valor {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-16);
-    text-align: left;
-  }
-  .valor__title { padding-inline: 0; }
-  .valor__icon { width: 52px; height: 52px; padding: var(--space-12); }
-  .valor__icon img { width: 28px; height: 28px; }
 }
