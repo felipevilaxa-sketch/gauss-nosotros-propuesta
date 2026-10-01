@@ -174,7 +174,7 @@ Notas de uso:
 - Las anclas usan `scroll-margin-top: header + subnav + 16px` como respaldo del offset calculado en JS.
 
 ### Componentes reutilizados en las secciones nuevas
-- **Inputs del formulario:** replican el estilo de campos del kit original (borde 1px ,  10px, padding .75em 1.125em, texto ). Foco: borde y anillo navy. Error: .
-- **Cards de actividad (Vida en Gauss):** misma construcción que la tarjeta del equipo (foto + pie , ).
-- **Etiqueta de categoría:** misma pieza que el tag "Nosotros" del hero (navy, ).
-- **Filtros:** píldoras  con borde ; activo en navy.
+- **Inputs del formulario:** replican el estilo de campos del kit original (borde 1px `--color-slate`, `--radius-icon` 10px, padding .75em 1.125em, texto `--color-navy`). Foco: borde y anillo navy. Error: `--color-error`.
+- **Cards de actividad (Vida en Gauss):** misma construcción que la tarjeta del equipo (foto + pie `--color-ice`, `--radius-card`).
+- **Etiqueta de categoría:** misma pieza que el tag "Nosotros" del hero (navy, `--radius-tag`).
+- **Filtros:** píldoras `--radius-pill` con borde `--color-border`; activo en navy.
