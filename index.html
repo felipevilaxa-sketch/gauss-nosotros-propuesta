@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/sections/header.css">
   <link rel="stylesheet" href="css/sections/offcanvas.css">
   <link rel="stylesheet" href="css/sections/hero.css">
+  <link rel="stylesheet" href="css/sections/cifras.css">
   <link rel="stylesheet" href="css/sections/subnav.css">
   <link rel="stylesheet" href="css/sections/cultura-valores.css">
   <link rel="stylesheet" href="css/sections/equipo.css">
@@ -199,7 +200,10 @@
     <div class="hero__text">
       <a class="hero__tag" href="#">Nosotros</a>
       <h1 class="hero__title" id="hero-title">Personas y propósito que impulsan la innovación</h1>
-      <a class="btn hero__cta" href="https://gausscontrol.com/contacto/">Escríbenos</a>
+      <div class="hero__actions">
+        <a class="btn hero__cta" href="#equipo">Conoce al equipo</a>
+        <a class="btn btn--outline-white hero__cta hero__cta--secondary" href="#trabaja">Trabaja con nosotros</a>
+      </div>
     </div>
     <div class="hero__media">
       <img src="assets/img/hero-equipo-gauss.png" srcset="assets/img/hero-equipo-gauss.png 540w" sizes="(max-width: 767px) 100vw, 540px" alt="Tres integrantes del equipo de Gauss Control conversando en la oficina" width="540" height="342">
@@ -208,6 +212,46 @@
 </section>
 <!-- =====================================================
      FIN SECCIÓN: hero
+     ===================================================== -->
+
+<!-- =====================================================
+     INICIO SECCIÓN: cifras (franja de respaldo bajo el hero)
+     ===================================================== -->
+<section id="cifras" class="cifras" aria-label="Gauss Control en cifras" data-cifras>
+  <!-- PLACEHOLDER: las 4 cifras y sus etiquetas son de ejemplo; confirmar valores reales con el cliente -->
+  <ul class="cifras__list">
+    <li class="cifra">
+      <p class="cifra__value">
+        <span class="cifra__number" aria-hidden="true" data-count="10" data-prefix="+">+10</span>
+        <span class="visually-hidden">Más de 10</span>
+      </p>
+      <p class="cifra__label">años de operación</p>
+    </li>
+    <li class="cifra">
+      <p class="cifra__value">
+        <span class="cifra__number" aria-hidden="true" data-count="4">4</span>
+        <span class="visually-hidden">4</span>
+      </p>
+      <p class="cifra__label">países en Latinoamérica</p>
+    </li>
+    <li class="cifra">
+      <p class="cifra__value">
+        <span class="cifra__number" aria-hidden="true" data-count="150" data-prefix="+">+150</span>
+        <span class="visually-hidden">Más de 150</span>
+      </p>
+      <p class="cifra__label">empresas clientes</p>
+    </li>
+    <li class="cifra">
+      <p class="cifra__value">
+        <span class="cifra__number" aria-hidden="true" data-count="500" data-prefix="+" data-suffix=" mil">+500 mil</span>
+        <span class="visually-hidden">Más de 500 mil</span>
+      </p>
+      <p class="cifra__label">trabajadores evaluados</p>
+    </li>
+  </ul>
+</section>
+<!-- =====================================================
+     FIN SECCIÓN: cifras
      ===================================================== -->
 
 <!-- =====================================================
@@ -502,5 +546,6 @@
 
 <script src="js/main.js" defer></script>
 <script src="js/sections/subnav.js" defer></script>
+<script src="js/sections/cifras.js" defer></script>
 </body>
 </html>

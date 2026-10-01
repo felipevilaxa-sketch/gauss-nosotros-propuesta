@@ -1,0 +1,63 @@
+/* =========================================================
+   SECCIÓN: cifras (#cifras) — 4 datos de respaldo bajo el hero
+   Mobile first: 2×2 → 4 columnas desde tablet.
+   ========================================================= */
+
+.cifras {
+  background: var(--color-ice);
+  padding: var(--space-32) var(--gutter);
+}
+
+.cifras__list {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-24) var(--space-16);
+}
+
+.cifra {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.cifra__value {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-regular);
+  line-height: 1;
+  letter-spacing: var(--ls-h2);
+  color: var(--color-navy);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.cifra__label {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--color-slate);
+}
+
+/* ---------- Tablet ---------- */
+@media (min-width: 768px) {
+  .cifras { padding-block: var(--space-40); }
+  .cifras__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .cifra {
+    padding-inline: var(--space-24);
+    border-left: 1px solid var(--color-border);
+  }
+  .cifra:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1025px) {
+  .cifras { padding-block: var(--space-48); }
+  .cifra { padding-inline: var(--space-40); }
+}

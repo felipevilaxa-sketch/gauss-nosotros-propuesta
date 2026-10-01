@@ -44,6 +44,13 @@
   margin-bottom: var(--space-24);
 }
 
+/* Dos CTA: primario (blanco) + secundario (contorno blanco) */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
 .hero__cta {
   padding: var(--space-16) var(--space-24);
   background: var(--color-white);
@@ -51,7 +58,15 @@
   border-radius: var(--radius-pill-lg);
 }
 .hero__cta:hover,
-.hero__cta:focus-visible { background: var(--color-white); color: var(--color-black-soft); }
+.hero__cta:focus-visible { background: var(--color-orange-tint); color: var(--color-black-soft); }
+
+.hero__cta--secondary {
+  padding: 15px 23px;                 /* compensa el borde de 1px para igualar el alto */
+  background: transparent;
+  color: var(--color-white);
+}
+.hero__cta--secondary:hover,
+.hero__cta--secondary:focus-visible { background: var(--color-white); color: var(--color-primary); }
 
 .hero__media {
   flex: 0 1 557px;
