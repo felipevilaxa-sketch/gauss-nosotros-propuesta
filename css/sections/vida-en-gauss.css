@@ -1,0 +1,194 @@
+/* =========================================================
+   SECCIÓN: vida-en-gauss (#vida-en-gauss)
+   Filtros por categoría + grilla de actividades + CTA LinkedIn.
+   Mobile first: 1 → 2 (tablet) → 4 columnas (desktop).
+   ========================================================= */
+
+.vida {
+  background: var(--color-white);
+  padding: var(--section-pad-y) var(--gutter);
+}
+
+.vida__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+.vida__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--heading-gap);
+}
+.vida .section-title,
+.vida .section-lead { text-align: left; }
+
+/* ---------- Filtros (píldoras) ---------- */
+.vida__filters {
+  /* en mobile se desplazan en horizontal, igual que la subnav */
+  margin-inline: calc(var(--gutter) * -1);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.vida__filters::-webkit-scrollbar { display: none; }
+
+.vida__filter-list {
+  display: flex;
+  gap: var(--space-8);
+  width: max-content;
+  padding: var(--space-4) var(--gutter);
+}
+
+.vida__filter {
+  padding: var(--space-12) var(--space-16);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-white);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-slate);
+  white-space: nowrap;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+.vida__filter:hover {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+}
+.vida__filter[aria-pressed="true"] {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* ---------- Actividades: carrusel en mobile, grilla desde tablet ---------- */
+.vida__grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 85%;
+  gap: var(--space-16);
+  margin-inline: calc(var(--gutter) * -1);
+  padding: var(--space-4) var(--gutter) var(--space-16);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+.vida__grid > .actividad { scroll-snap-align: start; }
+
+.actividad[hidden] { display: none; }
+
+/* Misma construcción que la tarjeta del equipo: foto + pie celeste */
+.actividad__card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--color-ice);
+}
+
+.actividad__photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.actividad__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-16) var(--space-16) var(--space-24);
+}
+
+/* Etiqueta de categoría: misma pieza que el tag "Nosotros" del hero */
+.actividad__tag {
+  align-self: flex-start;
+  margin-bottom: var(--space-4);
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-tag);
+  background: var(--color-navy);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-white);
+}
+
+.actividad__title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  letter-spacing: var(--ls-tight);
+  color: var(--color-navy);
+}
+
+.actividad__meta {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  color: var(--color-slate);
+}
+
+.actividad__text {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-slate);
+}
+
+/* ---------- CTA ---------- */
+.vida__cta {
+  display: flex;
+  justify-content: center;
+}
+/* Reutiliza el botón LinkedIn del footer, en navy para que destaque sobre blanco */
+.vida__linkedin {
+  gap: var(--space-12);
+  padding: var(--space-20) var(--space-48);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+.vida__linkedin:hover,
+.vida__linkedin:focus-visible { background: var(--color-slate-dark); color: var(--color-white); }
+.vida__linkedin img { width: 16px; height: 16px; }
+
+/* ---------- Tablet ---------- */
+@media (min-width: 768px) {
+  .vida__inner { gap: var(--space-40); }
+  .vida__grid {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-24);
+    margin-inline: 0;
+    padding: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1025px) {
+  .vida .section-title,
+  .vida .section-lead { text-align: center; }
+  .vida__filters {
+    margin-inline: 0;
+    overflow: visible;
+  }
+  .vida__filter-list {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-inline: 0;
+  }
+  .vida__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-32);
+  }
+}

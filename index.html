@@ -22,7 +22,9 @@
   <link rel="stylesheet" href="css/sections/mensaje-ceo.css">
   <link rel="stylesheet" href="css/sections/cultura-valores.css">
   <link rel="stylesheet" href="css/sections/equipo.css">
+  <link rel="stylesheet" href="css/sections/vida-en-gauss.css">
   <link rel="stylesheet" href="css/sections/presencia-latam.css">
+  <link rel="stylesheet" href="css/sections/trabaja.css">
   <link rel="stylesheet" href="css/sections/certificaciones.css">
   <link rel="stylesheet" href="css/sections/footer.css">
 </head>
@@ -470,6 +472,141 @@
      ===================================================== -->
 
 <!-- =====================================================
+     INICIO SECCIÓN: vida-en-gauss
+     ===================================================== -->
+<section id="vida-en-gauss" class="vida" aria-labelledby="vida-title" data-vida>
+  <div class="vida__inner">
+    <div class="vida__intro">
+      <h2 class="section-title" id="vida-title">Vida en Gauss</h2>
+      <!-- PLACEHOLDER: bajada de la sección Vida en Gauss -->
+      <p class="section-lead">Así se ve nuestro trabajo fuera de la pantalla: en terreno con nuestros clientes, aprendiendo juntos y celebrando lo que logramos como equipo en Latinoamérica.</p>
+    </div>
+
+    <div class="vida__filters" role="group" aria-label="Filtrar actividades por categoría">
+      <ul class="vida__filter-list">
+        <li><button class="vida__filter" type="button" data-filter="todas" aria-pressed="true">Todas</button></li>
+        <li><button class="vida__filter" type="button" data-filter="en-terreno" aria-pressed="false">En terreno</button></li>
+        <li><button class="vida__filter" type="button" data-filter="capacitaciones" aria-pressed="false">Capacitaciones</button></li>
+        <li><button class="vida__filter" type="button" data-filter="eventos-y-ferias" aria-pressed="false">Eventos y ferias</button></li>
+        <li><button class="vida__filter" type="button" data-filter="comunidad" aria-pressed="false">Comunidad</button></li>
+        <li><button class="vida__filter" type="button" data-filter="celebraciones" aria-pressed="false">Celebraciones</button></li>
+      </ul>
+    </div>
+    <p class="visually-hidden" aria-live="polite" data-vida-status></p>
+
+    <ul class="vida__grid" data-vida-grid>
+      <li class="actividad" data-category="en-terreno">
+        <!-- PLACEHOLDER: foto, título, fecha, país y texto de la actividad 01 -->
+        <article class="actividad__card">
+          <img class="actividad__photo" src="assets/placeholders/vida-01-en-terreno.svg" alt="Foto pendiente: implementación de cognus en faena minera" width="800" height="600" loading="lazy">
+          <div class="actividad__body">
+            <p class="actividad__tag">En terreno</p>
+            <h3 class="actividad__title">Implementación de Cognus en faena minera</h3>
+            <p class="actividad__meta"><time datetime="2026-08-12">12 de agosto de 2026</time><span aria-hidden="true"> · </span><span class="visually-hidden">, </span>Chile</p>
+            <p class="actividad__text">Acompañamos al equipo de operaciones durante la puesta en marcha en turno de noche.</p>
+          </div>
+        </article>
+      </li>
+      <li class="actividad" data-category="capacitaciones">
+        <!-- PLACEHOLDER: foto, título, fecha, país y texto de la actividad 02 -->
+        <article class="actividad__card">
+          <img class="actividad__photo" src="assets/placeholders/vida-02-capacitaciones.svg" alt="Foto pendiente: taller de gestión de fatiga para supervisores" width="800" height="600" loading="lazy">
+          <div class="actividad__body">
+            <p class="actividad__tag">Capacitaciones</p>
+            <h3 class="actividad__title">Taller de gestión de fatiga para supervisores</h3>
+            <p class="actividad__meta"><time datetime="2026-07-24">24 de julio de 2026</time><span aria-hidden="true"> · </span><span class="visually-hidden">, </span>Perú</p>
+            <p class="actividad__text">Más de 40 supervisores aprendieron a leer las alertas y actuar a tiempo.</p>
+          </div>
+        </article>
+      </li>
+      <li class="actividad" data-category="eventos-y-ferias">
+        <!-- PLACEHOLDER: foto, título, fecha, país y texto de la actividad 03 -->
+        <article class="actividad__card">
+          <img class="actividad__photo" src="assets/placeholders/vida-03-eventos-y-ferias.svg" alt="Foto pendiente: gauss control en expomin" width="800" height="600" loading="lazy">
+          <div class="actividad__body">
+            <p class="actividad__tag">Eventos y ferias</p>
+            <h3 class="actividad__title">Gauss Control en Expomin</h3>
+            <p class="actividad__meta"><time datetime="2026-06-18">18 de junio de 2026</time><span aria-hidden="true"> · </span><span class="visually-hidden">, </span>Chile</p>
+            <p class="actividad__text">Mostramos Gauss Alert y Gauss Fleet a operadores de toda la región.</p>
+          </div>
+        </article>
+      </li>
+      <li class="actividad" data-category="comunidad">
+        <!-- PLACEHOLDER: foto, título, fecha, país y texto de la actividad 04 -->
+        <article class="actividad__card">
+          <img class="actividad__photo" src="assets/placeholders/vida-04-comunidad.svg" alt="Foto pendiente: jornada de seguridad vial con conductores" width="800" height="600" loading="lazy">
+          <div class="actividad__body">
+            <p class="actividad__tag">Comunidad</p>
+            <h3 class="actividad__title">Jornada de seguridad vial con conductores</h3>
+            <p class="actividad__meta"><time datetime="2026-05-30">30 de mayo de 2026</time><span aria-hidden="true"> · </span><span class="visually-hidden">, </span>México</p>
+            <p class="actividad__text">Compartimos buenas prácticas de descanso con conductores de transporte de carga.</p>
+          </div>
+        </article>
+      </li>
+      <li class="actividad" data-category="celebraciones">
+        <!-- PLACEHOLDER: foto, título, fecha, país y texto de la actividad 05 -->
+        <article class="actividad__card">
+          <img class="actividad__photo" src="assets/placeholders/vida-05-celebraciones.svg" alt="Foto pendiente: aniversario gauss control" width="800" height="600" loading="lazy">
+          <div class="actividad__body">
+            <p class="actividad__tag">Celebraciones</p>
+            <h3 class="actividad__title">Aniversario Gauss Control</h3>
+            <p class="actividad__meta"><time datetime="2026-05-09">9 de mayo de 2026</time><span aria-hidden="true"> · </span><span class="visually-hidden">, </span>Chile</p>
+            <p class="actividad__text">Celebramos un nuevo año junto a los equipos de los cuatro países.</p>
+          </div>
+        </article>
+      </li>
+      <li class="actividad" data-category="en-terreno">
+        <!-- PLACEHOLDER: foto, título, fecha, país y texto de la actividad 06 -->
+        <article class="actividad__card">
+          <img class="actividad__photo" src="assets/placeholders/vida-06-en-terreno.svg" alt="Foto pendiente: visita técnica a centro de distribución" width="800" height="600" loading="lazy">
+          <div class="actividad__body">
+            <p class="actividad__tag">En terreno</p>
+            <h3 class="actividad__title">Visita técnica a centro de distribución</h3>
+            <p class="actividad__meta"><time datetime="2026-04-15">15 de abril de 2026</time><span aria-hidden="true"> · </span><span class="visually-hidden">, </span>Colombia</p>
+            <p class="actividad__text">Revisamos en terreno la integración de Gauss Fleet con la operación logística.</p>
+          </div>
+        </article>
+      </li>
+      <li class="actividad" data-category="capacitaciones">
+        <!-- PLACEHOLDER: foto, título, fecha, país y texto de la actividad 07 -->
+        <article class="actividad__card">
+          <img class="actividad__photo" src="assets/placeholders/vida-07-capacitaciones.svg" alt="Foto pendiente: onboarding regional de nuevos integrantes" width="800" height="600" loading="lazy">
+          <div class="actividad__body">
+            <p class="actividad__tag">Capacitaciones</p>
+            <h3 class="actividad__title">Onboarding regional de nuevos integrantes</h3>
+            <p class="actividad__meta"><time datetime="2026-03-20">20 de marzo de 2026</time><span aria-hidden="true"> · </span><span class="visually-hidden">, </span>México</p>
+            <p class="actividad__text">Una semana para conocer los productos, la cultura y a los equipos de cada país.</p>
+          </div>
+        </article>
+      </li>
+      <li class="actividad" data-category="celebraciones">
+        <!-- PLACEHOLDER: foto, título, fecha, país y texto de la actividad 08 -->
+        <article class="actividad__card">
+          <img class="actividad__photo" src="assets/placeholders/vida-08-celebraciones.svg" alt="Foto pendiente: reconocimiento a equipos de alto desempeño" width="800" height="600" loading="lazy">
+          <div class="actividad__body">
+            <p class="actividad__tag">Celebraciones</p>
+            <h3 class="actividad__title">Reconocimiento a equipos de alto desempeño</h3>
+            <p class="actividad__meta"><time datetime="2026-01-29">29 de enero de 2026</time><span aria-hidden="true"> · </span><span class="visually-hidden">, </span>Perú</p>
+            <p class="actividad__text">Destacamos a los equipos que llevaron más seguridad a sus clientes durante el año.</p>
+          </div>
+        </article>
+      </li>
+    </ul>
+
+    <div class="vida__cta">
+      <a class="btn vida__linkedin" href="https://www.linkedin.com/company/gausscontrol/" target="_blank" rel="noopener">
+        Síguenos en LinkedIn
+        <img src="assets/icons/linkedin-social-offcanvas.svg" alt="" width="16" height="16">
+        <span class="visually-hidden">(abre en una pestaña nueva)</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- =====================================================
+     FIN SECCIÓN: vida-en-gauss
+     ===================================================== -->
+
+<!-- =====================================================
      INICIO SECCIÓN: presencia-latam
      ===================================================== -->
 <section id="presencia-latam" class="latam" aria-labelledby="latam-title">
@@ -519,6 +656,126 @@
 </section>
 <!-- =====================================================
      FIN SECCIÓN: presencia-latam
+     ===================================================== -->
+
+<!-- =====================================================
+     INICIO SECCIÓN: trabaja (Trabaja con nosotros + formulario)
+     ===================================================== -->
+<section id="trabaja" class="trabaja" aria-labelledby="trabaja-title">
+  <div class="trabaja__inner">
+
+    <div class="trabaja__intro">
+      <h2 class="section-title" id="trabaja-title">Trabaja con nosotros</h2>
+      <!-- PLACEHOLDER: texto sobre por qué trabajar en Gauss (2–3 líneas) -->
+      <p class="section-lead">Buscamos personas que quieran usar la tecnología para cuidar vidas. En Gauss trabajarás con equipos de cuatro países, con autonomía para proponer y el desafío de llevar más seguridad a industrias que lo necesitan.</p>
+      <!-- PLACEHOLDER: beneficios destacados, confirmar con el cliente -->
+      <ul class="trabaja__reasons">
+        <li><img src="assets/icons/valor-agilidad.svg" alt="" width="20" height="20">Proyectos con impacto real en la seguridad de las personas</li>
+        <li><img src="assets/icons/valor-agilidad.svg" alt="" width="20" height="20">Equipos regionales en México, Colombia, Perú y Chile</li>
+        <li><img src="assets/icons/valor-agilidad.svg" alt="" width="20" height="20">Formación continua y espacio para crecer</li>
+      </ul>
+    </div>
+
+    <div class="trabaja__panel">
+      <form class="apply-form" id="apply-form" novalidate data-apply-form aria-labelledby="apply-title" aria-describedby="apply-note">
+        <h3 class="apply-form__title" id="apply-title">Postula aquí</h3>
+        <p class="apply-form__note" id="apply-note">Los campos marcados con <span aria-hidden="true">*</span><span class="visually-hidden">asterisco</span> son obligatorios.</p>
+
+        <div class="apply-form__grid">
+          <div class="field field--full">
+            <label class="field__label" for="ap-nombre">Nombre completo <span class="field__req" aria-hidden="true">*</span></label>
+            <input class="field__control" id="ap-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="ap-nombre-error">
+            <p class="field__error" id="ap-nombre-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="ap-email">Email <span class="field__req" aria-hidden="true">*</span></label>
+            <input class="field__control" id="ap-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="ap-email-error">
+            <p class="field__error" id="ap-email-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="ap-telefono">Teléfono <span class="field__req" aria-hidden="true">*</span></label>
+            <input class="field__control" id="ap-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="+56 9 1234 5678" required aria-describedby="ap-telefono-hint ap-telefono-error">
+            <p class="field__hint" id="ap-telefono-hint">Incluye el código de país.</p>
+            <p class="field__error" id="ap-telefono-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="ap-pais">País <span class="field__req" aria-hidden="true">*</span></label>
+            <div class="field__select">
+              <select class="field__control" id="ap-pais" name="pais" required aria-describedby="ap-pais-error">
+                <option value="">Selecciona un país</option>
+                <option>México</option>
+                <option>Colombia</option>
+                <option>Perú</option>
+                <option>Chile</option>
+              </select>
+            </div>
+            <p class="field__error" id="ap-pais-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="ap-area">Área de interés <span class="field__req" aria-hidden="true">*</span></label>
+            <div class="field__select">
+              <!-- PLACEHOLDER: confirmar listado de áreas con el cliente -->
+              <select class="field__control" id="ap-area" name="area" required aria-describedby="ap-area-error">
+                <option value="">Selecciona un área</option>
+                <option>Operaciones y Producto</option>
+                <option>Tecnología y Desarrollo</option>
+                <option>Comercial y Ventas</option>
+                <option>Customer Success</option>
+                <option>Soporte Técnico</option>
+                <option>Administración y Finanzas</option>
+                <option>Otra área</option>
+              </select>
+            </div>
+            <p class="field__error" id="ap-area-error" hidden></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="ap-linkedin">URL de LinkedIn <span class="field__optional">(opcional)</span></label>
+            <input class="field__control" id="ap-linkedin" name="linkedin" type="url" inputmode="url" autocomplete="url" placeholder="https://www.linkedin.com/in/tu-perfil" aria-describedby="ap-linkedin-error">
+            <p class="field__error" id="ap-linkedin-error" hidden></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="ap-cv">CV en PDF <span class="field__req" aria-hidden="true">*</span></label>
+            <input class="field__control field__file" id="ap-cv" name="cv" type="file" accept="application/pdf,.pdf" required aria-describedby="ap-cv-hint ap-cv-error">
+            <p class="field__hint" id="ap-cv-hint">Solo PDF, máximo 5 MB.</p>
+            <p class="field__error" id="ap-cv-error" hidden></p>
+          </div>
+
+          <div class="field field--full">
+            <label class="field__label" for="ap-mensaje">Mensaje <span class="field__optional">(opcional)</span></label>
+            <textarea class="field__control" id="ap-mensaje" name="mensaje" rows="4" maxlength="1000"></textarea>
+          </div>
+
+          <div class="field field--full field--check">
+            <div class="field__check-row">
+              <input class="field__checkbox" id="ap-consent" name="consentimiento" type="checkbox" required aria-describedby="ap-consent-error">
+              <label class="field__check-label" for="ap-consent">Acepto el tratamiento de mis datos personales para fines de selección, según las <a href="https://gausscontrol.com/politicas-corporativas/" target="_blank" rel="noopener">Políticas Corporativas<span class="visually-hidden"> (abre en una pestaña nueva)</span></a>. <span class="field__req" aria-hidden="true">*</span></label>
+            </div>
+            <p class="field__error" id="ap-consent-error" hidden></p>
+          </div>
+        </div>
+
+        <button class="btn apply-form__submit" type="submit">Enviar postulación</button>
+      </form>
+
+      <!-- Estado de éxito (el envío es simulado: no hay backend) -->
+      <div class="apply-success" id="apply-success" role="status" tabindex="-1" hidden data-apply-success>
+        <span class="apply-success__icon"><img src="assets/icons/valor-agilidad.svg" alt="" width="32" height="32"></span>
+        <h3 class="apply-success__title">¡Gracias por postular!</h3>
+        <p class="apply-success__text">Recibimos tu información. Si tu perfil calza con alguna búsqueda, nuestro equipo te contactará por email.</p>
+        <button class="btn apply-success__again" type="button" data-apply-again>Enviar otra postulación</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- =====================================================
+     FIN SECCIÓN: trabaja
      ===================================================== -->
 
 </main>
@@ -615,5 +872,7 @@
 <script src="js/main.js" defer></script>
 <script src="js/sections/subnav.js" defer></script>
 <script src="js/sections/cifras.js" defer></script>
+<script src="js/sections/vida-en-gauss.js" defer></script>
+<script src="js/sections/trabaja.js" defer></script>
 </body>
 </html>

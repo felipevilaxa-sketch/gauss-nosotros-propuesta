@@ -1,0 +1,289 @@
+/* =========================================================
+   SECCIÓN: trabaja (#trabaja) — intro + formulario de postulación
+   Mobile first: una columna → intro | formulario desde desktop.
+   Inputs basados en el estilo de campos del kit original de Elementor
+   (borde 1px slate, radio 10px, padding .75em 1.125em, texto navy).
+   ========================================================= */
+
+.trabaja {
+  background: var(--color-ice);
+  padding: var(--section-pad-y) var(--gutter);
+}
+
+.trabaja__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-32);
+}
+
+/* ---------- Intro ---------- */
+.trabaja__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--heading-gap);
+}
+.trabaja .section-title,
+.trabaja .section-lead { text-align: left; }
+
+.trabaja__reasons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-top: var(--space-8);
+}
+.trabaja__reasons li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--color-navy);
+}
+.trabaja__reasons img { width: 20px; height: 20px; flex: none; }
+
+/* ---------- Panel / card del formulario ---------- */
+.trabaja__panel {
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: var(--space-24);
+}
+
+.apply-form__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-regular);
+  line-height: 1;
+  letter-spacing: var(--ls-h3);
+  color: var(--color-navy);
+}
+.apply-form__note {
+  margin-top: var(--space-12);
+  font-size: var(--fs-small);
+  line-height: 1.2;
+  color: var(--color-slate);
+}
+
+.apply-form__grid {
+  margin-top: var(--space-24);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-20);
+}
+
+/* ---------- Campo ---------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  min-width: 0;
+}
+
+.field__label {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-navy);
+}
+.field__req { color: var(--color-error); }
+.field__optional { font-weight: var(--fw-regular); color: var(--color-slate); }
+
+.field__control {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--fs-body);
+  line-height: 1.2;
+  color: var(--color-navy);
+  background: var(--color-white);
+  border: 1px solid var(--color-slate);
+  border-radius: var(--radius-icon);
+  padding: 0.75em 1.125em;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.field__control::placeholder { color: var(--color-slate); opacity: 0.8; }
+.field__control:hover { border-color: var(--color-navy); }
+.field__control:focus-visible {
+  outline: none;
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 2px var(--color-navy);
+}
+textarea.field__control { resize: vertical; min-height: 112px; }
+
+/* Select con chevron propio */
+.field__select { position: relative; }
+.field__select select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: var(--space-40);
+  cursor: pointer;
+}
+.field__select::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-navy);
+  border-bottom: 2px solid var(--color-navy);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+/* Archivo: botón nativo con la píldora celeste del sitio */
+.field__file { padding: var(--space-8); cursor: pointer; }
+.field__file::file-selector-button {
+  margin-right: var(--space-12);
+  padding: var(--space-8) var(--space-16);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-ice);
+  font-family: var(--font-family);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  color: var(--color-navy);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+.field__file:hover::file-selector-button { background: var(--color-border); }
+
+.field__hint {
+  font-size: var(--fs-small);
+  line-height: 1.2;
+  color: var(--color-slate);
+}
+
+.field__error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  color: var(--color-error);
+}
+.field__error[hidden] { display: none; }
+.field__error::before {
+  content: "!";
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-error);
+  color: var(--color-white);
+  font-size: var(--fs-xsmall);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+}
+
+.field__control[aria-invalid="true"] { border-color: var(--color-error); }
+.field__control[aria-invalid="true"]:focus-visible { box-shadow: 0 0 0 2px var(--color-error); }
+
+/* Checkbox de consentimiento */
+.field__check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+.field__checkbox {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--color-navy);
+  cursor: pointer;
+}
+.field__checkbox[aria-invalid="true"] { outline: 2px solid var(--color-error); outline-offset: 2px; }
+.field__check-label {
+  font-size: var(--fs-small);
+  line-height: 1.4;
+  color: var(--color-slate);
+  cursor: pointer;
+}
+.field__check-label a {
+  color: var(--color-navy);
+  font-weight: var(--fw-medium);
+  text-decoration: underline;
+}
+
+/* ---------- Botones ---------- */
+.apply-form__submit {
+  margin-top: var(--space-32);
+  width: 100%;
+  padding: var(--space-16) var(--space-24);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+.apply-form__submit:hover,
+.apply-form__submit:focus-visible { background: var(--color-slate-dark); }
+.apply-form__submit[aria-busy="true"] { opacity: 0.7; cursor: progress; }
+
+/* ---------- Estado de éxito ---------- */
+.apply-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-16);
+  padding-block: var(--space-24);
+}
+.apply-success[hidden] { display: none; }
+.apply-success:focus { outline: none; }
+.apply-success__icon {
+  width: 64px;
+  height: 64px;
+  padding: var(--space-16);
+  border-radius: var(--radius-icon);
+  background: var(--color-ice);
+}
+.apply-success__icon img { width: 32px; height: 32px; }
+.apply-success__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-regular);
+  line-height: 1;
+  letter-spacing: var(--ls-h3);
+  color: var(--color-navy);
+}
+.apply-success__text {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-slate);
+}
+/* Contorno navy: variante del botón outline del sitio para fondo blanco */
+.apply-success__again {
+  margin-top: var(--space-8);
+  padding: 15px 23px;
+  border: 1px solid var(--color-navy);
+  color: var(--color-navy);
+  background: transparent;
+}
+.apply-success__again:hover,
+.apply-success__again:focus-visible { background: var(--color-navy); color: var(--color-white); }
+
+/* ---------- Tablet ---------- */
+@media (min-width: 768px) {
+  .trabaja__panel { padding: var(--space-32); }
+  .apply-form__grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-24); }
+  .field--full { grid-column: 1 / -1; }
+  .apply-form__submit { width: auto; }
+}
+
+/* ---------- Desktop: intro a la izquierda, formulario a la derecha ---------- */
+@media (min-width: 1025px) {
+  .trabaja__inner {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-80);
+    align-items: start;
+  }
+  .trabaja__intro {
+    position: sticky;
+    top: calc(var(--subnav-height) + var(--space-48));
+  }
+  .trabaja__panel { padding: var(--space-40); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field__control { transition: none; }
+}

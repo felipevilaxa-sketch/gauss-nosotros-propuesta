@@ -167,7 +167,14 @@ Agregados a `css/tokens.css` para las secciones nuevas. Todos derivan de valores
 | Token | Valor | Derivado de | Uso |
 |---|---|---|---|
 | `--subnav-height` | 56px | Escala de espaciado (`--space-56`) | Alto de la barra de anclas sticky (`#subnav`) |
+| `--color-error` | `var(--color-maroon)` = #631502 | Color secondary del kit de Elementor (ya presente en la paleta) | Mensajes de error, asterisco de obligatorio y borde de campos inválidos en el formulario de `#trabaja`. Contraste ~13:1 sobre blanco |
 
 Notas de uso:
 - Las secciones nuevas se escriben **mobile first** con `@media (min-width: 768px)` (tablet) y `@media (min-width: 1025px)` (desktop), equivalentes a los breakpoints originales (≤767 / ≤1024).
 - Las anclas usan `scroll-margin-top: header + subnav + 16px` como respaldo del offset calculado en JS.
+
+### Componentes reutilizados en las secciones nuevas
+- **Inputs del formulario:** replican el estilo de campos del kit original (borde 1px ,  10px, padding .75em 1.125em, texto ). Foco: borde y anillo navy. Error: .
+- **Cards de actividad (Vida en Gauss):** misma construcción que la tarjeta del equipo (foto + pie , ).
+- **Etiqueta de categoría:** misma pieza que el tag "Nosotros" del hero (navy, ).
+- **Filtros:** píldoras  con borde ; activo en navy.

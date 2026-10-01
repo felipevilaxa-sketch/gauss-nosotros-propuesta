@@ -39,6 +39,7 @@
   --color-orange-soft: #FFBC7D;
   --color-maroon: #631502;            /* texto menú off-canvas */
   --color-maroon-line: rgba(156, 32, 1, 0.5); /* divisores off-canvas */
+  --color-error: var(--color-maroon); /* NUEVO alias · errores de formulario (secondary del kit, 13:1 sobre blanco) */
   --color-navy: #003666;              /* títulos, acentos */
   --color-slate: #677C8E;             /* texto, fondo footer */
   --color-slate-dark: #4A647B;        /* botón LinkedIn footer */
