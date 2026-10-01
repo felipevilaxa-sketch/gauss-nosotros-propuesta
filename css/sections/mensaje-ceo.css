@@ -1,0 +1,94 @@
+/* =========================================================
+   SECCIÓN: mensaje-ceo (#mensaje-ceo)
+   Mobile first: foto arriba → 2 columnas desde tablet.
+   ========================================================= */
+
+.ceo {
+  background: var(--color-white);
+  padding: var(--section-pad-y) var(--gutter) 0;
+}
+
+.ceo__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+.ceo__media {
+  width: 100%;
+  max-width: 320px;
+}
+.ceo__media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-card);
+  background: var(--color-ice);
+}
+
+.ceo__body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.ceo__mark {
+  width: 40px;
+  height: auto;
+  color: var(--color-orange);
+}
+
+.ceo__quote { margin: 0; }
+.ceo__quote p {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-regular);
+  line-height: 1.2;
+  letter-spacing: var(--ls-h3);
+  color: var(--color-navy);
+}
+
+.ceo__author {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--color-border);
+}
+.ceo__name {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-navy);
+}
+.ceo__role {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-slate);
+}
+
+/* ---------- Tablet ---------- */
+@media (min-width: 768px) {
+  .ceo__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-48);
+  }
+  .ceo__media { flex: 0 0 280px; }
+  .ceo__mark { width: 48px; }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1025px) {
+  .ceo__inner {
+    gap: var(--space-80);
+    padding-inline: var(--space-80);  /* acota el largo de línea de la cita */
+  }
+  .ceo__media { flex-basis: 360px; }
+  .ceo__quote p { line-height: 1.15; }
+}
