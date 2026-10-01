@@ -1,0 +1,106 @@
+/* =========================================================
+   SECCIÓN: subnav (#subnav) — anclas internas sticky
+   Mobile first. Queda pegada bajo el header; cuando el header
+   se oculta al bajar, sube a top: 0 (clase en <html> desde js/sections/subnav.js).
+   ========================================================= */
+
+.subnav {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 9990;                      /* bajo el header (9999) y el off-canvas */
+  height: var(--subnav-height);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition-header), box-shadow var(--transition-fast);
+}
+.is-header-hidden .subnav { top: 0; }
+.subnav.is-stuck { box-shadow: var(--shadow-header); }
+
+.subnav__inner {
+  height: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  /* scroll horizontal en mobile, sin barra visible */
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.subnav__inner::-webkit-scrollbar { display: none; }
+
+.subnav__list {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-24);
+  height: 100%;
+  width: max-content;
+  padding-inline: var(--gutter);
+}
+
+.subnav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-slate);
+  white-space: nowrap;
+  scroll-snap-align: start;
+  transition: color var(--transition-fast);
+}
+/* Indicador de sección activa */
+.subnav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-navy);
+  transform: scaleX(0);
+  transition: transform var(--transition-fast);
+}
+.subnav__link:hover { color: var(--color-navy); }
+.subnav__link.is-active,
+.subnav__link[aria-current="true"] { color: var(--color-navy); }
+.subnav__link.is-active::after,
+.subnav__link[aria-current="true"]::after { transform: scaleX(1); }
+.subnav__link:focus-visible { outline-offset: -2px; }
+
+/* ---------- Tablet ---------- */
+@media (min-width: 768px) {
+  .subnav__list {
+    gap: var(--space-32);
+    margin-inline: auto;
+  }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1025px) {
+  .subnav__inner { overflow: visible; }
+  .subnav__list {
+    gap: var(--space-48);
+    padding-inline: 0;
+    width: auto;
+    justify-content: center;
+  }
+}
+
+/* Scroll suave sólo si el usuario no pidió movimiento reducido */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .subnav,
+  .subnav__link::after { transition: none; }
+}
+
+/* Offset de anclas: header + subnav, para que los títulos no queden tapados */
+main section[id] { scroll-margin-top: calc(var(--header-height) + var(--subnav-height) + var(--space-16)); }
+
+/* El destino recibe foco al navegar con la subnav; no se dibuja contorno en todo el bloque */
+main section[tabindex="-1"]:focus { outline: none; }

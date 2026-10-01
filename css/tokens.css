@@ -82,6 +82,7 @@
   --gutter: 40px;
   --header-height: 110px;
   --header-pad-x: 40px;
+  --subnav-height: 56px;              /* NUEVO · barra de anclas sticky */
 
   --section-pad-y: 100px;
   --section-gap: 58px;

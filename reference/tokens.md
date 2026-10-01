@@ -157,3 +157,17 @@ Letter-spacing general: **-0.055em** (16px → -0.88px).
 - Off-canvas mobile: Contacto, Inicia Sesión, menú, idiomas, LinkedIn, Compliance, Políticas, Ventas, Soporte técnico y Oficinas.
 - Acordeón Gerencia (cerrado por defecto): 7 personas.
 - Se descarta: widget "Cognus" oculto en cultura (`display:none`) y banner de cookies CookieYes.
+
+---
+
+## 9. Tokens nuevos (propuesta de mejora)
+
+Agregados a `css/tokens.css` para las secciones nuevas. Todos derivan de valores ya presentes en el sitio.
+
+| Token | Valor | Derivado de | Uso |
+|---|---|---|---|
+| `--subnav-height` | 56px | Escala de espaciado (`--space-56`) | Alto de la barra de anclas sticky (`#subnav`) |
+
+Notas de uso:
+- Las secciones nuevas se escriben **mobile first** con `@media (min-width: 768px)` (tablet) y `@media (min-width: 1025px)` (desktop), equivalentes a los breakpoints originales (≤767 / ≤1024).
+- Las anclas usan `scroll-margin-top: header + subnav + 16px` como respaldo del offset calculado en JS.
