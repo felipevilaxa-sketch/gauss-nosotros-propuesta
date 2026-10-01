@@ -618,28 +618,28 @@
 
     <div class="latam__body">
       <ul class="latam__list">
-        <li class="country">
+        <li class="country" data-country="mexico" data-photo="assets/placeholders/oficina-mexico.svg">
           <img class="country__flag" src="assets/icons/flag-mexico.svg" alt="" width="26" height="26">
           <div class="country__text">
             <h3 class="country__name">México</h3>
             <p class="country__desc">Contacto: <a href="tel:+528125922594">+52 81 2592 2594</a><br>Dirección: Av. 2 de Octubre 333, Zona Industrial, 66210 San Pedro Garza García, N.L.</p>
           </div>
         </li>
-        <li class="country">
+        <li class="country" data-country="colombia" data-photo="assets/placeholders/oficina-colombia.svg">
           <img class="country__flag" src="assets/icons/flag-colombia.svg" alt="" width="26" height="26">
           <div class="country__text">
             <h3 class="country__name">Colombia</h3>
             <p class="country__desc">Contacto: <a href="tel:+573108217805">+57 31 0821 7805</a><br>Dirección: Calle 146 # 7-64 OF 307, Bogotá D.C</p>
           </div>
         </li>
-        <li class="country">
+        <li class="country" data-country="peru" data-photo="assets/placeholders/oficina-peru.svg">
           <img class="country__flag" src="assets/icons/flag-peru.svg" alt="" width="26" height="26">
           <div class="country__text">
             <h3 class="country__name">Perú</h3>
             <p class="country__desc">Contacto: <a href="tel:+51945236760">+51 945 236 760</a><br>Dirección: Av. Circunvalación del Club Golf Los Incas N° 134, Torre I, Of. 1301, Urb. Club Golf Los Incas - Surco</p>
           </div>
         </li>
-        <li class="country">
+        <li class="country" data-country="chile" data-photo="assets/placeholders/oficina-chile.svg">
           <img class="country__flag" src="assets/icons/flag-chile.svg" alt="" width="26" height="26">
           <div class="country__text">
             <h3 class="country__name">Chile</h3>
@@ -648,8 +648,21 @@
         </li>
       </ul>
 
-      <div class="latam__map">
+      <!-- Mapa interactivo: js/sections/presencia-latam.js reemplaza la imagen por el SVG en línea
+           y muestra la foto de la oficina al pasar o enfocar cada país. Sin JS queda la imagen estática. -->
+      <div class="latam__map" data-latam-map>
         <img src="assets/img/mapa-latinoamerica.svg" alt="Mapa de América destacando México, Colombia, Perú y Chile, países con presencia de Gauss Control" width="390" height="454" loading="lazy">
+        <!-- PLACEHOLDER: fotos de las oficinas (assets/placeholders/oficina-*.svg) -->
+        <div class="map-popup" id="map-popup" role="tooltip" hidden data-map-popup>
+          <img class="map-popup__photo" src="" alt="" width="800" height="600">
+          <div class="map-popup__body">
+            <img class="map-popup__flag" src="" alt="" width="20" height="20">
+            <div>
+              <p class="map-popup__name"></p>
+              <p class="map-popup__address"></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -874,5 +887,6 @@
 <script src="js/sections/cifras.js" defer></script>
 <script src="js/sections/vida-en-gauss.js" defer></script>
 <script src="js/sections/trabaja.js" defer></script>
+<script src="js/sections/presencia-latam.js" defer></script>
 </body>
 </html>

@@ -33,6 +33,7 @@ Lista de lo que hay que pedirle al cliente, ordenada por sección. En el HTML ca
 - [ ] Mensaje de éxito: confirmar el texto y el plazo de respuesta que se le promete al postulante.
 
 ## Presencia en Latinoamérica (`#presencia-latam`)
+- [ ] **Foto de la oficina de cada país** (México, Colombia, Perú, Chile) para el popup del mapa: horizontal 4:3, mínimo 800 × 600 px. Hoy son placeholders en `assets/placeholders/oficina-*.svg`.
 - [ ] **REVISAR dirección de Perú.** La sección muestra "Av. Circunvalación del Club Golf Los Incas N° 134, Torre I, Of. 1301, Urb. Club Golf Los Incas - Surco", y el menú mobile del header dice "Camino Real 456, oficina 801 (Torre Real), San Isidro - Lima". Confirmar cuál es la vigente. *(Esta discrepancia viene del sitio original.)*
 
 ## Header / menú mobile
