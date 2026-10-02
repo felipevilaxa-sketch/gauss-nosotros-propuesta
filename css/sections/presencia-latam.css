@@ -87,7 +87,6 @@
 /* ---------- Mobile ---------- */
 @media (max-width: 767px) {
   .latam { padding: var(--space-80) var(--gutter); }
-  .latam__inner { max-width: 351px; }
   .latam .section-title,
   .latam .section-lead { text-align: left; }
   .latam__body {

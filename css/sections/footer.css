@@ -134,7 +134,7 @@
 
 /* ---------- Mobile ---------- */
 @media (max-width: 767px) {
-  .site-footer { padding: var(--space-32) var(--space-20); }
+  .site-footer { padding: var(--space-32) var(--gutter); }   /* margen lateral estándar */
   .site-footer__inner {
     grid-template-columns: 1fr;
     min-height: 0;

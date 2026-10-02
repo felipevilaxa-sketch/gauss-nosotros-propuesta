@@ -122,11 +122,31 @@
 
 /* ---------- Mobile ---------- */
 @media (max-width: 767px) {
-  .equipo { padding: var(--space-32) var(--space-24); }
+  .equipo { padding: var(--space-32) var(--gutter); }   /* margen lateral estándar */
   .equipo__inner { gap: var(--space-16); }
-  .team-grid { --cols: 1; --col-gap: 0px; row-gap: var(--space-32); }
-  .team-grid--between { row-gap: var(--space-32); }
-  .team-card__photo { height: 324px; }
+  /* Directorio y Gerencia como slider horizontal. En Gerencia las dos listas
+     (5 + 2 tarjetas) se funden en un solo carrusel con display: contents. */
+  .accordion__content {
+    display: flex;
+    gap: var(--space-16);
+    margin-inline: calc(var(--gutter) * -1);
+    padding: var(--space-24) var(--gutter) var(--space-16);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+  .accordion__item:not([open]) .accordion__content { display: none; }
+  .team-grid { display: contents; }
+  .team-grid + .team-grid { margin-top: 0; }
+  .team-card {
+    flex: 0 0 80%;
+    width: auto;
+    scroll-snap-align: start;
+  }
+  .team-card__photo { height: 300px; }
   .accordion__icon,
   .accordion__icon img { width: 30px; height: 30px; }
 }

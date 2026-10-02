@@ -149,7 +149,25 @@
 
 /* ---------- Mobile: intro alineada a la izquierda (como el original) ---------- */
 @media (max-width: 767px) {
-  .cultura__inner { max-width: 351px; }
   .cultura .section-title,
   .cultura .section-lead { text-align: left; }
+
+  /* Valores como slider horizontal: la siguiente card asoma para invitar a deslizar */
+  .valores {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 82%;
+    margin-inline: calc(var(--gutter) * -1);
+    padding: var(--space-4) var(--gutter) var(--space-16);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+  .valor { scroll-snap-align: start; }
+  @supports (grid-template-rows: subgrid) {
+    .valores { grid-template-rows: auto auto 1fr; }   /* cada card ocupa una columna de 3 filas alineadas */
+  }
 }
