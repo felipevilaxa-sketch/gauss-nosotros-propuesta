@@ -17,6 +17,9 @@
   gap: var(--space-32);
 }
 
+/* Los hijos de un flex en columna no deben crecer al ancho de su contenido */
+.vida__inner > * { min-width: 0; }
+
 .vida__intro {
   display: flex;
   flex-direction: column;
@@ -80,6 +83,10 @@
   scrollbar-color: var(--color-border) transparent;
 }
 .vida__grid > .actividad { scroll-snap-align: start; }
+/* El carrusel debe ser la referencia de posición de sus hijos: los textos
+   .visually-hidden (position: absolute) de las cards quedaban fuera del recorte
+   y ensanchaban la página en mobile hasta ~2400px */
+.vida__grid { position: relative; }
 
 .actividad[hidden] { display: none; }
 
