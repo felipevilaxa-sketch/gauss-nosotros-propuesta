@@ -1,6 +1,8 @@
-# Gauss Control · Nosotros — réplica estática
+# Gauss Control · Nosotros — propuesta de mejora
 
-Réplica fiel de <https://gausscontrol.com/nosotros/> en HTML, CSS y JS puros (sin WordPress, Elementor ni build step), para iterar sección por sección.
+Prototipo estático (HTML, CSS y JS puros, sin build step) de la página <https://gausscontrol.com/nosotros/>. Parte de una réplica fiel del sitio (commit "réplica fiel v1") y suma la propuesta de mejora para presentar al cliente.
+
+> Contenido de ejemplo: todo lo marcado como `PLACEHOLDER` en los comentarios de `index.html` está listado en [CONTENIDO-PENDIENTE.md](CONTENIDO-PENDIENTE.md). El formulario de postulación **no envía datos**: solo simula el envío.
 
 ## Cómo levantarlo en local
 
@@ -24,13 +26,26 @@ css/
   sections/
     header.css             Header fijo, menú, dropdowns, acciones
     offcanvas.css          Menú lateral mobile/tablet (parte del header)
-    hero.css
+    hero.css               Hero con dos CTA
+    cifras.css             Franja de cifras
+    subnav.css             Sub-navegación sticky
+    mensaje-ceo.css
     cultura-valores.css    Incluye .section-title / .section-lead compartidos
     equipo.css             Acordeón + tarjetas
-    presencia-latam.css
+    vida-en-gauss.css      Filtros + actividades
+    presencia-latam.css    Lista de países + mapa interactivo
+    trabaja.css            Intro + formulario de postulación
     certificaciones.css
     footer.css
-js/main.js                 Header ocultable, dropdowns, off-canvas, selector de idioma, acordeón
+js/
+  main.js                  Header ocultable, dropdowns, off-canvas, selector de idioma, acordeón
+  sections/
+    subnav.js              Sección activa (IntersectionObserver), scroll con offset
+    cifras.js              Conteo al entrar en viewport
+    vida-en-gauss.js       Filtros por categoría
+    presencia-latam.js     Mapa interactivo y popup de oficinas
+    trabaja.js             Validación del formulario
+assets/placeholders/       Fotos pendientes (actividades y oficinas), SVG 4:3
 assets/
   fonts/                   WorkSans 400 / 500 / 600 (subset original, woff2 + woff)
   img/                     Logo, hero, mapa, favicon, banderas de idioma
@@ -48,10 +63,15 @@ Cada sección está delimitada en `index.html` con comentarios `INICIO SECCIÓN`
 | id | Contenido | CSS |
 |---|---|---|
 | `#header` | Logo, menú (Inicio · Soluciones ▾ · Casos · Nosotros · Español ▾), LinkedIn, Contacto, Inicia Sesión, hamburguesa + off-canvas `#offcanvas` | `header.css`, `offcanvas.css` |
-| `#hero` | Etiqueta "Nosotros", H1, botón Escríbenos, foto | `hero.css` |
-| `#cultura-valores` | H2, párrafo y 4 valores con ícono | `cultura-valores.css` |
-| `#equipo` | "Conoce nuestro equipo" + acordeón `#directorio` (5) y `#gerencia` (7) | `equipo.css` |
-| `#presencia-latam` | H2, párrafo, 4 países y mapa | `presencia-latam.css` |
+| `#hero` | Etiqueta "Nosotros", H1, botones "Conoce al equipo" y "Trabaja con nosotros", foto (en mobile, sobre el texto) | `hero.css` |
+| `#cifras` | **Nueva.** 4 cifras de respaldo con conteo animado | `cifras.css` |
+| `#subnav` | **Nueva.** Anclas sticky: Cultura · Equipo · Vida en Gauss · Oficinas · Trabaja con nosotros | `subnav.css` |
+| `#mensaje-ceo` | **Nueva.** Foto, cita, nombre y cargo del CEO | `mensaje-ceo.css` |
+| `#cultura-valores` | H2, párrafo y 4 cards de valores con "Cómo se vive en Gauss" (slider en mobile) | `cultura-valores.css` |
+| `#equipo` | "Conoce nuestro equipo" + acordeón `#directorio` (5) y `#gerencia` (7) (slider en mobile) | `equipo.css` |
+| `#vida-en-gauss` | **Nueva.** Filtros por categoría, 8 actividades (carrusel en mobile) y CTA a LinkedIn | `vida-en-gauss.css` |
+| `#presencia-latam` | H2, párrafo, 4 países y mapa interactivo: hover en país o caja → país oscurecido + popup con foto de la oficina | `presencia-latam.css` |
+| `#trabaja` | **Nueva.** Intro y formulario de postulación con validación (envío simulado) | `trabaja.css` |
 | `#certificaciones` | ISO 27001 y SICEP (dentro de la 1.ª columna del footer, como en el original) | `certificaciones.css` |
 | `#footer` | Marca, LinkedIn, copyright, oficinas, Ventas, Soporte, Compliance y Políticas | `footer.css` |
 
