@@ -1,9 +1,10 @@
 /* =========================================================
    SECCIÓN: cultura-valores (#cultura-valores)
-   Intro original + grilla de cards de valores (mobile first).
+   Intro (lema, propósito, cultura) + 5 cards de valores (mobile first).
+   Contenido oficial: presentación Onboarding 2026 del cliente.
    ========================================================= */
 
-/* Títulos de sección compartidos (también los usa presencia-latam) */
+/* Títulos de sección compartidos (también los usan otras secciones) */
 .section-title {
   font-size: var(--fs-h2);
   font-weight: var(--fw-regular);
@@ -32,7 +33,34 @@
 .cultura__intro {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--heading-gap);
+}
+
+/* Lema: misma pieza que el tag "Nosotros" del hero */
+.cultura__tag {
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-tag);
+  background: var(--color-navy);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-white);
+}
+
+/* Propósito destacado */
+.cultura__purpose {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  line-height: 1.3;
+  color: var(--color-navy);
+}
+.cultura__purpose-label {
+  display: block;
+  margin-bottom: var(--space-4);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-slate);
 }
 
 /* ---------- Cards de valores ---------- */
@@ -46,7 +74,7 @@
 .valor {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--space-12);
   padding: var(--space-24);
   background: var(--color-white);
   border: 1px solid var(--color-border);
@@ -69,31 +97,39 @@
 }
 .valor__icon img { width: 28px; height: 28px; }
 
+/* Nombre corto del valor (etiqueta) */
 .valor__name {
-  font-size: var(--fs-h3);
-  font-weight: var(--fw-regular);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
   line-height: 1;
-  letter-spacing: var(--ls-h3);
+  color: var(--color-slate);
+}
+
+/* El valor oficial */
+.valor__title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  letter-spacing: var(--ls-tight);
   color: var(--color-navy);
 }
 
 .valor__summary {
   font-size: var(--fs-body);
-  font-weight: var(--fw-medium);
   line-height: var(--lh-body);
-  color: var(--color-navy);
+  color: var(--color-slate);
 }
 
 /* "Cómo se vive en Gauss": misma pieza celeste que el pie de las tarjetas del equipo */
 .valor__live {
-  margin: 0;
+  margin-top: var(--space-4);
   flex: 1;                            /* rellena la card: los bloques terminan alineados */
   padding: var(--space-16);
   background: var(--color-ice);
   border-radius: var(--radius-icon);
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-12);
 }
 .valor__live-label {
   font-size: var(--fs-small);
@@ -101,58 +137,72 @@
   line-height: 1;
   color: var(--color-navy);
 }
-.valor__live blockquote { margin: 0; }
-.valor__live blockquote p {
-  font-size: var(--fs-body);
-  line-height: var(--lh-body);
+.valor__conductas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+.valor__conductas li {
+  position: relative;
+  padding-left: var(--space-16);
+  font-size: var(--fs-small);
+  line-height: 1.35;
   color: var(--color-slate);
 }
-.valor__live figcaption {
-  font-size: var(--fs-small);
-  font-weight: var(--fw-medium);
-  line-height: 1.2;
-  color: var(--color-slate);
+.valor__conductas li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-navy);
 }
 
-/* Con subgrid, encabezado, bajada y bloque se alinean entre cards de la misma fila */
+/* Con subgrid, encabezado, título, bajada y bloque se alinean entre cards de la misma fila */
 @supports (grid-template-rows: subgrid) {
   .valor {
     display: grid;
-    grid-row: span 3;
+    grid-row: span 4;
     grid-template-rows: subgrid;
     align-content: start;
   }
 }
 
-/* ---------- Tablet: 2×2 ---------- */
+/* ---------- Tablet: 2 + 2 + 1 centrada ---------- */
 @media (min-width: 768px) {
+  .cultura__intro { align-items: center; }
+  .cultura__purpose { text-align: center; }
   .valores {
     margin-top: var(--space-48);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-24);
   }
-  .valor { padding: var(--space-32); }
-  .valor__head {
-    flex-direction: column;
-    align-items: flex-start;
+  .valor {
+    grid-column: span 2;
+    padding: var(--space-32);
   }
+  .valor:last-child:nth-child(odd) { grid-column: 2 / span 2; }
   .valor__icon { width: 64px; height: 64px; padding: var(--space-16); }
   .valor__icon img { width: 32px; height: 32px; }
 }
 
-/* ---------- Desktop: 4 columnas ---------- */
+/* ---------- Desktop: 3 + 2 centradas ---------- */
 @media (min-width: 1025px) {
   .cultura__intro { padding-bottom: 14px; }
-  .valores { grid-template-columns: repeat(4, 1fr); }
+  .valores { grid-template-columns: repeat(6, 1fr); }
   .valor { padding: var(--space-24); }
+  .valor:last-child:nth-child(odd) { grid-column: span 2; }   /* anula la regla de tablet */
+  .valor:nth-child(4) { grid-column: 2 / span 2; }
 }
 
-/* ---------- Mobile: intro alineada a la izquierda (como el original) ---------- */
+/* ---------- Mobile: intro a la izquierda y valores en slider ---------- */
 @media (max-width: 767px) {
   .cultura .section-title,
   .cultura .section-lead { text-align: left; }
 
-  /* Valores como slider horizontal: la siguiente card asoma para invitar a deslizar */
+  /* La siguiente card asoma para invitar a deslizar */
   .valores {
     grid-template-columns: none;
     grid-auto-flow: column;
@@ -168,6 +218,11 @@
   }
   .valor { scroll-snap-align: start; }
   @supports (grid-template-rows: subgrid) {
-    .valores { grid-template-rows: auto auto 1fr; }   /* cada card ocupa una columna de 3 filas alineadas */
+    .valores { grid-template-rows: auto auto auto 1fr; }   /* cada card ocupa una columna de 4 filas alineadas */
   }
+}
+
+/* Tablet: el centro de la segunda fila del desktop no aplica */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .valor:nth-child(4) { grid-column: span 2; }
 }
