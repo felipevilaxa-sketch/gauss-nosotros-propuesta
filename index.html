@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/sections/subnav.css">
   <link rel="stylesheet" href="css/sections/mensaje-ceo.css">
   <link rel="stylesheet" href="css/sections/cultura-valores.css">
+  <link rel="stylesheet" href="css/sections/historia.css">
   <link rel="stylesheet" href="css/sections/equipo.css">
   <link rel="stylesheet" href="css/sections/vida-en-gauss.css">
   <link rel="stylesheet" href="css/sections/presencia-latam.css">
@@ -266,6 +267,7 @@
   <div class="subnav__inner">
     <ul class="subnav__list">
       <li><a class="subnav__link" href="#cultura-valores">Cultura</a></li>
+      <li><a class="subnav__link" href="#historia">Historia</a></li>
       <li><a class="subnav__link" href="#equipo">Equipo</a></li>
       <li><a class="subnav__link" href="#vida-en-gauss">Vida en Gauss</a></li>
       <li><a class="subnav__link" href="#presencia-latam">Oficinas</a></li>
@@ -403,6 +405,110 @@
 </section>
 <!-- =====================================================
      FIN SECCIÓN: cultura-valores
+     ===================================================== -->
+
+<!-- =====================================================
+     INICIO SECCIÓN: historia (línea de tiempo)
+     Hitos: presentación Onboarding 2026 del cliente ("Historia Gauss").
+     Pendientes de confirmar con el cliente y NO incluidos: nombres de clientes
+     (SQM, COPEC, ENAP, AMSA), "1.000 GA en AMSa" y "2025: Apertura oficina Colombia".
+     ===================================================== -->
+<section id="historia" class="historia" aria-labelledby="historia-title" data-historia>
+  <div class="historia__inner">
+    <div class="historia__head">
+      <div class="historia__intro">
+        <h2 class="section-title" id="historia-title">Nuestra historia</h2>
+        <p class="section-lead">Desde 2013 desarrollamos tecnología para prevenir accidentes laborales. Estos son los hitos que nos trajeron hasta aquí.</p>
+      </div>
+      <div class="historia__controls" data-historia-controls hidden>
+        <button class="historia__btn" type="button" data-historia-prev aria-label="Ver hitos anteriores">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="historia__btn" type="button" data-historia-next aria-label="Ver hitos siguientes">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="historia__track" tabindex="0" role="region" aria-label="Línea de tiempo de Gauss Control, de 2013 a hoy" data-historia-track>
+      <ol class="hitos">
+        <li class="hito">
+          <p class="hito__year"><time datetime="2013">2013</time></p>
+          <ul class="hito__list">
+            <li>Creación de Desert Point SpA en Chile.</li>
+            <li>Nuestro primer producto: formularios digitales.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2014">2014</time></p>
+          <ul class="hito__list">
+            <li>Nace Gauss Control.</li>
+            <li>Primer modelo predictivo de accidentes viales.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2015">2015</time></p>
+          <ul class="hito__list">
+            <li>Llega nuestro primer cliente.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2016">2016</time></p>
+          <ul class="hito__list">
+            <li>Primera versión del software Gauss Control.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2018">2018</time></p>
+          <ul class="hito__list">
+            <li>Primera versión del procesador Gauss Control.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2021">2021</time></p>
+          <ul class="hito__list">
+            <li>Lanzamiento de <a href="https://gausscontrol.com/cognus">Cognus</a>.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2022">2022</time></p>
+          <ul class="hito__list">
+            <li>Apertura en México.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2023">2023</time></p>
+          <ul class="hito__list">
+            <li>Lanzamiento de <a href="https://gausscontrol.com/gauss-alert">Gauss Alert</a>.</li>
+            <li>Apertura en Colombia.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2024">2024</time></p>
+          <ul class="hito__list">
+            <li>Apertura en Perú.</li>
+          </ul>
+        </li>
+        <li class="hito">
+          <p class="hito__year"><time datetime="2025">2025</time></p>
+          <ul class="hito__list">
+            <li>Lanzamiento de <a href="https://gausscontrol.com/gauss-risk">Gauss Risk 360</a>.</li>
+            <li>Lanzamiento de <a href="https://gausscontrol.com/gauss-fleet">Gauss Fleet</a>.</li>
+            <li>Lorena Oliver asume como Gerente General.</li>
+          </ul>
+        </li>
+        <li class="hito hito--today">
+          <p class="hito__year">Hoy</p>
+          <ul class="hito__list">
+            <li>Más de 20 mil trabajadores protegidos cada día en 4 países de Latinoamérica.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- =====================================================
+     FIN SECCIÓN: historia
      ===================================================== -->
 
 <!-- =====================================================
@@ -914,6 +1020,7 @@
 <script src="js/main.js" defer></script>
 <script src="js/sections/subnav.js" defer></script>
 <script src="js/sections/cifras.js" defer></script>
+<script src="js/sections/historia.js" defer></script>
 <script src="js/sections/vida-en-gauss.js" defer></script>
 <script src="js/sections/trabaja.js" defer></script>
 <script src="js/sections/presencia-latam.js" defer></script>
