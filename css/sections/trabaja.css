@@ -27,22 +27,37 @@
 .trabaja .section-title,
 .trabaja .section-lead { text-align: left; }
 
+/* La experiencia Gauss: programas para colaboradores */
+.trabaja__experience {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-top: var(--space-8);
+}
+.trabaja__experience-title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  color: var(--color-navy);
+}
 .trabaja__reasons {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
-  margin-top: var(--space-8);
+  gap: var(--space-16);
 }
 .trabaja__reasons li {
   display: flex;
   align-items: flex-start;
   gap: var(--space-12);
   font-size: var(--fs-body);
-  font-weight: var(--fw-medium);
   line-height: var(--lh-body);
+  color: var(--color-slate);
+}
+.trabaja__reasons strong {
+  font-weight: var(--fw-medium);
   color: var(--color-navy);
 }
-.trabaja__reasons img { width: 20px; height: 20px; flex: none; }
+.trabaja__reasons img { width: 20px; height: 20px; flex: none; margin-top: 1px; }
 
 /* ---------- Panel / card del formulario ---------- */
 .trabaja__panel {

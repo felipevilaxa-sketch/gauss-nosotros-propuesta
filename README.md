@@ -31,6 +31,7 @@ css/
     subnav.css             Sub-navegación sticky
     mensaje-ceo.css
     cultura-valores.css    Incluye .section-title / .section-lead compartidos
+    historia.css           Línea de tiempo
     equipo.css             Acordeón + tarjetas
     vida-en-gauss.css      Filtros + actividades
     presencia-latam.css    Lista de países + mapa interactivo
@@ -42,6 +43,7 @@ js/
   sections/
     subnav.js              Sección activa (IntersectionObserver), scroll con offset
     cifras.js              Conteo al entrar en viewport
+    historia.js            Botones de la línea de tiempo
     vida-en-gauss.js       Filtros por categoría
     presencia-latam.js     Mapa interactivo y popup de oficinas
     trabaja.js             Validación del formulario
@@ -68,6 +70,7 @@ Cada sección está delimitada en `index.html` con comentarios `INICIO SECCIÓN`
 | `#subnav` | **Nueva.** Anclas sticky: Cultura · Equipo · Vida en Gauss · Oficinas · Trabaja con nosotros | `subnav.css` |
 | `#mensaje-ceo` | **Nueva.** Foto, cita, nombre y cargo del CEO | `mensaje-ceo.css` |
 | `#cultura-valores` | H2, párrafo y 4 cards de valores con "Cómo se vive en Gauss" (slider en mobile) | `cultura-valores.css` |
+| `#historia` | **Nueva.** Línea de tiempo 2013 → hoy (vertical en mobile, horizontal con botones desde tablet) | `historia.css` |
 | `#equipo` | "Conoce nuestro equipo" + acordeón `#directorio` (5) y `#gerencia` (7) (slider en mobile) | `equipo.css` |
 | `#vida-en-gauss` | **Nueva.** Filtros por categoría, 8 actividades (carrusel en mobile) y CTA a LinkedIn | `vida-en-gauss.css` |
 | `#presencia-latam` | H2, párrafo, 4 países y mapa interactivo: hover en país o caja → país oscurecido + popup con foto de la oficina | `presencia-latam.css` |

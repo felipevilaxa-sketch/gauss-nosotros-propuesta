@@ -20,6 +20,35 @@
   padding-bottom: 15px;
 }
 
+/* Industrias: píldoras informativas (mismo estilo que los filtros de Vida en Gauss, sin interacción) */
+.latam__industries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+}
+.latam__industries-title {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  color: var(--color-slate);
+}
+.latam__industries-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-8);
+}
+.latam__industries-list li {
+  padding: var(--space-8) var(--space-16);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-navy);
+}
+
 .latam__body {
   /* sin tope de ancho: el mapa crece hasta igualar el alto de la lista */
   margin: var(--space-24) auto 0;
@@ -89,6 +118,8 @@
   .latam { padding: var(--space-80) var(--gutter); }
   .latam .section-title,
   .latam .section-lead { text-align: left; }
+  .latam__industries { align-items: flex-start; }
+  .latam__industries-list { justify-content: flex-start; }
   .latam__body {
     flex-direction: column;
     align-items: stretch;

@@ -22,23 +22,32 @@
 
 .certificaciones__item {
   width: 127px;
-  height: 90px;
+  min-height: 90px;
   border-radius: 5px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
   padding-top: 5px;
+}
+/* Línea explicativa bajo cada sello */
+.certificaciones__caption {
+  font-size: var(--fs-xsmall);
+  line-height: 1.3;
+  text-align: center;
+  color: var(--color-white);
 }
 .certificaciones__item img { width: 80px; height: 80px; object-fit: contain; }
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1024px) {
   .certificaciones__title { font-size: var(--fs-body); }
-  .certificaciones__item { height: 104px; padding-top: 12px; }
+  .certificaciones__item { min-height: 104px; padding-top: 12px; }
 }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 767px) {
   .certificaciones { gap: var(--space-4); }
-  .certificaciones__item { height: 104px; padding-top: 22px; }
+  .certificaciones__item { min-height: 104px; padding-top: 22px; }
   .certificaciones__item img { width: 74px; height: 74px; }
 }
