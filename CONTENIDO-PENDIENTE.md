@@ -10,6 +10,9 @@ Lista de lo que hay que pedirle o confirmar con el cliente, ordenada por secció
 - [ ] **Colombia:** la presentación dice "2023: Apertura Colombia" y "2025: Apertura oficina Colombia". Hoy solo se muestra 2023. Confirmar si se agrega la oficina en 2025.
 - [ ] **Organigramas por gerencia** (diapositivas ocultas de la presentación): ¿se pueden usar para una pestaña "Líderes" en Equipo?
 
+## Equipo (`#equipo`)
+- [ ] **URL de LinkedIn de cada persona** del Directorio (5) y la Gerencia (7). Los botones ya están en las fichas, pero hoy no enlazan.
+
 ## Mensaje del CEO (`#mensaje-ceo`)
 - [ ] Cita de José Rafael Campino (2–3 líneas), aprobada por él.
 - [ ] Confirmar el cargo que se muestra: hoy dice "Presidente Ejecutivo (CEO)", como en Gerencia.
