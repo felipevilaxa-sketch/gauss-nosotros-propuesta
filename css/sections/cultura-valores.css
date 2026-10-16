@@ -1,6 +1,6 @@
 /* =========================================================
    SECCIÓN: cultura-valores (#cultura-valores)
-   Intro (lema, propósito, cultura) + 5 cards de valores (mobile first).
+   Intro (lema, propósito, cultura) + 5 valores desplegables (mobile first).
    Contenido oficial: presentación Onboarding 2026 del cliente.
    ========================================================= */
 
@@ -63,23 +63,38 @@
   color: var(--color-slate);
 }
 
-/* ---------- Cards de valores ---------- */
+/* ---------- Valores desplegables ---------- */
 .valores {
   margin-top: var(--space-32);
   display: grid;
   grid-template-columns: 1fr;
+  align-items: start;                 /* al abrir una card, sus vecinas no se estiran */
   gap: var(--space-16);
 }
 
 .valor {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-12);
-  padding: var(--space-24);
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
+  transition: border-color var(--transition-fast);
 }
+.valor:hover,
+.valor:has(.valor__details[open]) { border-color: var(--color-slate-light); }
+
+/* Cabecera clickeable: ícono + etiqueta, botón +/− y título */
+.valor__trigger {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-12) var(--space-16);
+  padding: var(--space-24);
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--radius-card);
+}
+.valor__trigger::-webkit-details-marker { display: none; }
+.valor__trigger::marker { content: ""; }
+.valor__trigger:focus-visible { outline-offset: -4px; }
 
 .valor__head {
   display: flex;
@@ -107,11 +122,33 @@
 
 /* El valor oficial */
 .valor__title {
+  grid-column: 1 / -1;
+  min-height: 2.4em;                  /* 2 líneas: las cards cerradas miden lo mismo */
   font-size: var(--fs-h4);
   font-weight: var(--fw-medium);
   line-height: 1.2;
   letter-spacing: var(--ls-tight);
   color: var(--color-navy);
+}
+
+/* Botón +/−: mismos íconos que el acordeón de Equipo */
+.valor__toggle { grid-row: 1; grid-column: 2; display: block; width: 32px; height: 32px; }
+.valor__toggle img { width: 32px; height: 32px; }
+.valor__toggle-open { display: none !important; }
+.valor__details[open] .valor__toggle-open { display: block !important; }
+.valor__details[open] .valor__toggle-closed { display: none !important; }
+
+/* Abierta: el título queda pegado a su contenido */
+.valor__details[open] .valor__trigger { padding-bottom: var(--space-16); }
+.valor__details[open] .valor__title { min-height: 0; }
+
+/* Contenido desplegable */
+.valor__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: 0 var(--space-24) var(--space-24);
+  overflow: hidden;
 }
 
 .valor__summary {
@@ -122,8 +159,6 @@
 
 /* "Cómo se vive en Gauss": misma pieza celeste que el pie de las tarjetas del equipo */
 .valor__live {
-  margin-top: var(--space-4);
-  flex: 1;                            /* rellena la card: los bloques terminan alineados */
   padding: var(--space-16);
   background: var(--color-ice);
   border-radius: var(--radius-icon);
@@ -160,16 +195,6 @@
   background: var(--color-navy);
 }
 
-/* Con subgrid, encabezado, título, bajada y bloque se alinean entre cards de la misma fila */
-@supports (grid-template-rows: subgrid) {
-  .valor {
-    display: grid;
-    grid-row: span 4;
-    grid-template-rows: subgrid;
-    align-content: start;
-  }
-}
-
 /* ---------- Tablet: 2 + 2 + 1 centrada ---------- */
 @media (min-width: 768px) {
   .cultura__intro { align-items: center; }
@@ -179,10 +204,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-24);
   }
-  .valor {
-    grid-column: span 2;
-    padding: var(--space-32);
-  }
+  .valor { grid-column: span 2; }
   .valor:last-child:nth-child(odd) { grid-column: 2 / span 2; }
   .valor__icon { width: 64px; height: 64px; padding: var(--space-16); }
   .valor__icon img { width: 32px; height: 32px; }
@@ -192,9 +214,13 @@
 @media (min-width: 1025px) {
   .cultura__intro { padding-bottom: 14px; }
   .valores { grid-template-columns: repeat(6, 1fr); }
-  .valor { padding: var(--space-24); }
   .valor:last-child:nth-child(odd) { grid-column: span 2; }   /* anula la regla de tablet */
   .valor:nth-child(4) { grid-column: 2 / span 2; }
+}
+
+/* Tablet: el centro de la segunda fila del desktop no aplica */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .valor:nth-child(4) { grid-column: span 2; }
 }
 
 /* ---------- Mobile: intro a la izquierda y valores en slider ---------- */
@@ -217,12 +243,8 @@
     scrollbar-color: var(--color-border) transparent;
   }
   .valor { scroll-snap-align: start; }
-  @supports (grid-template-rows: subgrid) {
-    .valores { grid-template-rows: auto auto auto 1fr; }   /* cada card ocupa una columna de 4 filas alineadas */
-  }
 }
 
-/* Tablet: el centro de la segunda fila del desktop no aplica */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .valor:nth-child(4) { grid-column: span 2; }
+@media (prefers-reduced-motion: reduce) {
+  .valor { transition: none; }
 }

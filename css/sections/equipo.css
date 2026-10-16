@@ -114,6 +114,23 @@
   color: var(--color-slate);
 }
 
+/* Botón LinkedIn de cada persona (enlace pendiente: js/sections/equipo.js) */
+.team-card__linkedin {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-top: var(--space-4);
+  border-radius: 50%;
+  background: var(--color-navy);
+  transition: background-color var(--transition-fast);
+}
+.team-card__linkedin img { width: 16px; height: 16px; }
+.team-card__linkedin:hover,
+.team-card__linkedin:focus-visible { background: var(--color-slate-dark); }
+.team-card__linkedin:focus-visible { outline-offset: 2px; }
+
 /* ---------- Tablet ---------- */
 @media (max-width: 1024px) {
   .team-grid { --cols: 3; --col-gap: 5%; }
